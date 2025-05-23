@@ -1,0 +1,59 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.click-area {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.click-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.hitbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hitbox.tech-click:hover ~ .click-area.tech {
+  z-index: 11;
+}
+
+.hitbox.tech-click:hover ~ .click-area.tech img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+}
+
+.hitbox.art-click:hover ~ .click-area.art img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+}
+
+.tech-click {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+
+.art-click {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
