@@ -94,3 +94,8 @@ body, html {
   width: 120%;
   display: none;
 }
+
+#Under-Tech{
+  display: none;
+  width: 100%;
+}

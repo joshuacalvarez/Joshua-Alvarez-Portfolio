@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
-    <div class="hitbox tech-click" onclick="location.href='tech.html'"></div>
+    <div class="hitbox tech-click"></div>
     <div class="hitbox art-click"></div>
     
      <div class="click-area tech">
@@ -15,11 +15,16 @@
         <img src="images/Art Paper.png" alt="Art Button">
      </div>
 
-     <div class="video-overlay" id="videoOverlay">
-         <video id="introVideo" src="images/Art Paper Animation.webm" autoplay muted></video>
+     <div class="video-overlay" id="artVideoOverlay">
+         <video id="artIntroVideo" src="images/Art Paper Animation.webm" autoplay muted></video>
+      </div>
+
+      <div class="video-overlay" id="techVideoOverlay">
+         <video id="techIntroVideo" src="images/Tech Paper Animation.webm" autoplay muted></video>
       </div>
 
       <img src="images/Web Art Under Graphic.png" id="Under-Art">
+      <img src="images/Web Tech Under Graphic.png" id="Under-Tech">
 </body>
 </html>
 <script src="js/index.js"></script>
