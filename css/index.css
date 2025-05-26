@@ -90,3 +90,7 @@ body, html {
   transform: scale(1.05);
 }
 
+#Under-Art{
+  width: 120%;
+  display: none;
+}

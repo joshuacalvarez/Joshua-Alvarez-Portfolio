@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const artPaper = document.querySelector(".click-area.art");
   const techPaper = document.querySelector(".click-area.tech");
+  const artUnder = document.getElementById("Under-Art");
 
 
   if (artHitbox && videoOverlay && introVideo) {
@@ -14,7 +15,8 @@ window.addEventListener("DOMContentLoaded", () => {
       artPaper.style.display = "none";
       techPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px)";
       videoOverlay.style.display = "block";
-
+      artUnder.style.display = "block";
+    
       introVideo.play();
 
       // Redirect when video ends
