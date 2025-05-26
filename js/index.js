@@ -36,3 +36,14 @@ window.addEventListener("pageshow", (event) => {
     introVideo.currentTime = 0;
   }
 });
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+    location.reload();
+  }
+});
+
+window.addEventListener("unload", () => {
+  const videoOverlay = document.getElementById("videoOverlay");
+  if (videoOverlay) videoOverlay.style.display = "none";
+});
