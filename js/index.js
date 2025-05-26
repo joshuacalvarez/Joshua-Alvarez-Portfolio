@@ -26,3 +26,13 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    const videoOverlay = document.getElementById("videoOverlay");
+    const introVideo = document.getElementById("introVideo");
+    videoOverlay.style.display = "none";
+    introVideo.pause();
+    introVideo.currentTime = 0;
+  }
+});
