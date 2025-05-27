@@ -53,7 +53,7 @@ body, html {
 
 .hitbox.art-click:hover ~ .click-area.art img {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(5 5 10px rgba(0, 0, 0, 0.3));
 }
 
 
@@ -97,5 +97,5 @@ body, html {
 
 #Under-Tech{
   display: none;
-  width: 100%;
+  width: 120%;
 }

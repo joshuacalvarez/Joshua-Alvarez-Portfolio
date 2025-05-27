@@ -1,0 +1,56 @@
+body{
+    background-image: url("../images/Paper Graphic.png");
+}
+
+.card{
+    border: 10px solid white;
+    border-radius: 25px;
+    transition-duration: .3s;
+    /* box-shadow: 5px 5px 20px 15px black; */
+    width: 25%;
+    height: auto;
+    background-color: whitesmoke;
+    margin: 20px;
+    z-index: 3;
+    position: relative;
+}
+
+.Card-Containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 95vh;
+}
+
+.card-label{
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+img{
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.card:hover ~ .Card-Containers{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+}

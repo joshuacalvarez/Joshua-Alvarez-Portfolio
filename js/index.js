@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Show the video overlay
       e.preventDefault();
       artPaper.style.display = "none";
-      techPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px)";
+      techPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
       artVideoOverlay.style.display = "block";
       artUnder.style.display = "block";
     
@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
       //Show overlay
       e.preventDefault();
       techPaper.style.display = "none";
-      artPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px)";
+      artPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
       techVideoOverlay.style.display = "block";
       techUnder.style.display = "block";
 
