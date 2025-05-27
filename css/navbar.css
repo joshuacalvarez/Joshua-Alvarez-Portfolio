@@ -1,0 +1,47 @@
+*{
+  font-family: Tahoma;
+  font-size: 72px;
+}
+
+.navcontainer{
+  background-image: url('../images/Paper Navbar.png');
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+  position: absolute;
+  filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.6));
+}
+
+.navbar {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 70%;
+  width: 80%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
+
+.navbar a {
+  color: white; /* or whatever contrasts with your background */
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px black;
+}
+
+.navbar li{
+  /* background-image:url('../images/Paper Navbar.png'); */
+}

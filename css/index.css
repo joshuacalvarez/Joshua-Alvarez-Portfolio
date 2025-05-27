@@ -5,6 +5,9 @@ body, html {
   overflow: hidden;
 }
 
+.content {
+  margin-top: 200px;
+}
 
 .click-area {
   position: absolute;
@@ -80,7 +83,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   display: none;
-  z-index: 9999;
+  z-index: 5;
 }
 
 .video-overlay video {

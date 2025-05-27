@@ -20,7 +20,7 @@ body{
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 95vh;
+    height: 70vh;
 }
 
 .card-label{
@@ -35,7 +35,7 @@ img{
 }
 
 .card:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     z-index: 10;
 }
 
@@ -53,4 +53,12 @@ img{
     text-decoration: none;
     color: inherit;
     display: contents;
+}
+
+* {
+    font-family: Tahoma;
+}
+
+#content {
+    margin-top: 200px;
 }
