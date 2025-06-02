@@ -6,8 +6,8 @@ body{
     border: 10px solid white;
     border-radius: 25px;
     transition-duration: .3s;
-    /* box-shadow: 5px 5px 20px 15px black; */
-    width: 25%;
+    box-shadow: 10px 5px 10px 5px grey;
+    width: 20%;
     height: auto;
     background-color: whitesmoke;
     margin: 20px;
