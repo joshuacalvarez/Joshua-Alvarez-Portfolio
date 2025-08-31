@@ -1,0 +1,24 @@
+body{
+    background-image: url("../images/Paper Graphic.png");
+}
+
+img{
+    border-style: solid;
+    border-width: 10px;
+    border-color: white;
+    border-radius: 10px;
+    /* border-color: rgb(113, 171, 220); */
+    width: 25%;
+}
+
+.painting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 80vh;
+}
+
+* {
+    font-family: Tahoma;
+}
