@@ -18,12 +18,47 @@ document.addEventListener("click", (e) => {
     modal.classList.add("show");
 });
 
-document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.reveal-btn');
-    if (!btn) return;
-    const box = btn.closest('.censor-box');
-    box.classList.add('revealed');
+// Open modal only if not censored
+document.addEventListener("click", (e) => {
+  const img = e.target.closest("img.painting");
+  if (!img) return;
+
+  const card = img.closest(".painting");
+  const box  = card?.querySelector(".censor-box");
+  if (box && !box.classList.contains("revealed")) return; // still censored
+
+  modalImg.src = img.dataset.full || img.src;
+  modalImg.alt = img.alt || "";
+  modal.classList.add("show");
 });
+
+// Toggle censoring
+document.addEventListener("click", (e) => {
+  // Reveal
+  const revealBtn = e.target.closest(".reveal-btn");
+  if (revealBtn) {
+    const card = revealBtn.closest(".painting");
+    const box  = card.querySelector(".censor-box");
+    box.classList.add("revealed");
+
+    // show the recensor button that's OUTSIDE the box (but in the same card)
+    const recensor = card.querySelector(".recensor-btn");
+    if (recensor) recensor.classList.add("recensor-btn-revealed");
+    return;
+  }
+
+  // Re-censor (button is outside the box)
+  const recensorBtn = e.target.closest(".recensor-btn");
+  if (recensorBtn) {
+    const card = recensorBtn.closest(".painting");
+    const box  = card.querySelector(".censor-box");
+    box?.classList.remove("revealed");
+
+    recensorBtn.classList.remove("recensor-btn-revealed");
+    return;
+  }
+});
+
 
 
 // close behaviors

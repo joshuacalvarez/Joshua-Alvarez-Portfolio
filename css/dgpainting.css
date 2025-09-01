@@ -25,6 +25,8 @@ div.painting{
     margin-bottom: 100px;
 }
 
+
+
 .description{
     display: flex;
     width: 30%;
@@ -35,6 +37,7 @@ div.painting{
     border-radius: 1px;
     align-items: center;
     justify-content: center;
+    margin-left: -1px;
 }
 
 .title{
@@ -66,8 +69,6 @@ img.painting:hover{
 .censor-box{
   position: relative;
   display: inline-block;
-  border: 10px solid #fff;
-  border-radius: 12px;
   overflow: hidden;
   height: 55vh;
 }
@@ -100,13 +101,13 @@ img.painting:hover{
 
 /* Nice minimal button */
 .reveal-btn{
-  width: 200px;          /* keep pill size */
-  height: 80px;
-  padding: 0;            /* size comes from w/h */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
+    width: 200px;
+    height: 80px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
   
   font-size: 48px;
   background:#fff; color:#111; font-weight:700; border:0; cursor:pointer;
@@ -119,9 +120,46 @@ img.painting:hover{
 }
 
 .censor-box.revealed .censor-overlay{ display: none; }
+.censor-box.revealed{
+    border-color: transparent;   /* keep width so layout doesn't jump */
+    overflow: visible;           /* let the image's ring show */
+}
+.censor-box.revealed > img.painting{
+    box-shadow: 0 0 0 var(--frame, 10px) #fff;
+    border-radius: calc(var(--radius, 12px) - var(--frame, 10px)) !important;
+}
 
 
-/* Modal base: stays in DOM, but invisible and click-through */
+.recensor-btn{
+  position:absolute; bottom: 0px; right:200px;
+  width: 200px;
+    height: 80px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+  
+  font-size: 48px;
+  background:#111; color:#fff; font-weight:700; border:0; cursor:pointer;
+
+  transition-duration: .2s;
+
+  opacity:0; pointer-events:none; transition:opacity .2s ease;
+}
+
+
+.recensor-btn:hover{
+    transform: scale(1.02);
+}
+
+
+
+.recensor-btn-revealed{
+  opacity:1; pointer-events:auto;
+}
+
+
 .modal {
   position: fixed; inset: 0;
   display: flex; align-items: center; justify-content: center;
