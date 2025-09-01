@@ -15,8 +15,8 @@
   display: flex;
   justify-content: center;
   z-index: 9999;
-  position: absolute;
-  filter: drop-shadow(0px 10px 2px rgba(0, 0, 0, 0.6));
+  position: fixed;
+  filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.6));
 }
 
 .navbar {
@@ -36,10 +36,10 @@
 }
 
 .navbar a {
-  color: white; /* or whatever contrasts with your background */
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 3px 3px 3px black;
 }
 
 .navbar li{
