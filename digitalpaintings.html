@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="css/navbar.css"/>
 </head>
 <body>
+        
     <div id="navbar-container"></div>
-    <div class="painting">
-        <img src="images/art/Gray Scale.jpg">
+
+    <!-- Thumbnail to click -->
+     <div class="imgContainer" style="margin-top: 200px;">
+         <img class="painting" id="artImg" src="images/art/Gray Scale.jpg" alt="Gray Scale" />
+         
+     </div>
+
+    <!-- Modal (hidden by default via your CSS) -->
+    <div class="modal" id="artModal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgExpanded" src="images/art/Gray Scale.jpg" alt="Gray Scale (expanded)" />
     </div>
+
+
+    
 </body>
 </html>
 <script src="js/main.js"></script>
+<script src="js/arts.js"></script>

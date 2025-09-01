@@ -21,6 +21,9 @@ window.addEventListener("DOMContentLoaded", () => {
     artHitbox.addEventListener("click", (e) => {
       // Show the video overlay
       e.preventDefault();
+
+      document.getElementById("pageBlocker").style.display = "block"; // activate blocker
+
       artPaper.style.display = "none";
       techPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
       artVideoOverlay.style.display = "block";
@@ -30,6 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // Redirect when video ends
       artIntroVideo.onended = () => {
+        document.getElementById("pageBlocker").style.display = "none"; // remove blocker
         window.location.href = "art.html";
       };
     });
@@ -40,6 +44,9 @@ window.addEventListener("DOMContentLoaded", () => {
     techHitbox.addEventListener("click", (e) => {
       //Show overlay
       e.preventDefault();
+
+      document.getElementById("pageBlocker").style.display = "block"; // activate blocker
+
       techPaper.style.display = "none";
       artPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
       techVideoOverlay.style.display = "block";
@@ -47,6 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
       techIntroVideo.onended = () => {
+        document.getElementById("pageBlocker").style.display = "none"; // remove blocker
         window.location.href = "tech.html";
       };
     });

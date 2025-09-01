@@ -2,23 +2,59 @@ body{
     background-image: url("../images/Paper Graphic.png");
 }
 
-img{
+.painting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 50vh;
+}
+
+img.painting{
     border-style: solid;
     border-width: 10px;
     border-color: white;
     border-radius: 10px;
     /* border-color: rgb(113, 171, 220); */
-    width: 25%;
+    width: auto;
+    justify-content: center;
+    cursor: pointer;
+    margin: 25px;
+    transition-duration: .3s;
 }
 
-.painting{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 80vh;
+img.painting:hover{
+    transform: scale(1.05);
 }
 
 * {
     font-family: Tahoma;
+}
+
+/* Modal base: stays in DOM, but invisible and click-through */
+.modal {
+  position: fixed; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.9);
+  z-index: 10000;
+
+  opacity: 0;                 /* invisible */
+  pointer-events: none;       /* clicks pass through */
+  transition: opacity .3s ease;
+}
+
+/* Shown state: visible + interactive */
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  max-height: 95vh;
+  border-radius: 25px;
+}
+
+.close{
+  position: absolute; top: 20px; right: 35px;
+  color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;
 }
