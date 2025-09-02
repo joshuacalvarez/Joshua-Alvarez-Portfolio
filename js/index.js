@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Redirect when video ends
       artIntroVideo.onended = () => {
         document.getElementById("pageBlocker").style.display = "none"; // remove blocker
-        window.location.href = "art.html";
+        window.location.href = "art";
       };
     });
   }
@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       techIntroVideo.onended = () => {
         document.getElementById("pageBlocker").style.display = "none"; // remove blocker
-        window.location.href = "tech.html";
+        window.location.href = "tech";
       };
     });
   }
