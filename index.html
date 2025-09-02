@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <script>document.documentElement.classList.add('preloading');</script>
     <title>Joshua Alvarez Portfolio</title>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="css/loader.css"/>
 </head>
 <body>
+   <div id="preloader">
+        <div class="loader">
+            <div id="logo-bar">
+            <img src="/images/YouTube Logo.svg" class="logo bg" alt="Lumpy Animations">
+            <img src="/images/YouTube Logo.svg" class="logo fg" alt="" aria-hidden="true">
+            </div>
+            <div id="prePercent" class="percent">0%</div>
+        </div>
+    </div>
+
    <div id="navbar-container"></div>
 
    <div id="pageBlocker"></div>
@@ -37,3 +49,4 @@
 </html>
 <script src="js/index.js"></script>
 <script src="js/main.js"></script>
+<script src="js/loader.js"></script>

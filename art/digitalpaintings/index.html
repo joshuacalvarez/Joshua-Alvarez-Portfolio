@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>document.documentElement.classList.add('preloading');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Paintings</title>
     <link rel="stylesheet" href="/css/dgpainting.css"/>
     <link rel="stylesheet" href="/css/navbar.css"/>
+    <link rel="stylesheet" href="/css/loader.css"/>
 </head>
 <body>
-        
+    <div id="preloader">
+        <div class="loader">
+            <div id="logo-bar">
+            <img src="/images/YouTube Logo.svg" class="logo bg" alt="Lumpy Animations">
+            <img src="/images/YouTube Logo.svg" class="logo fg" alt="" aria-hidden="true">
+            </div>
+            <div id="prePercent" class="percent">0%</div>
+        </div>
+    </div>
+
     <div id="navbar-container"></div>
 
-    <!-- Thumbnails to click -->
     <div class="container" style="margin-top: 200px;">
         <div class="painting">
             <img class="painting" src="/images/art/Gray Scale.jpg" alt="Gray Scale" />
@@ -97,3 +107,4 @@
 </html>
 <script src="/js/main.js"></script>
 <script src="/js/arts.js"></script>
+<script src="/js/loader.js"></script>
