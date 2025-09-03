@@ -4,6 +4,7 @@ body{
 
 container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 90%;
@@ -26,24 +27,33 @@ div.painting{
 }
 
 
-
 .description{
     display: flex;
+    flex-direction: column;
     width: 30%;
     height: 90%;
     text-align: center;
     background-color: white;
     color: rgb(59, 59, 59);
-    border-radius: 1px;
-    align-items: center;
-    justify-content: center;
     margin-left: -1px;
+    justify-content: space-between;
+}
+
+.desc-text{
+  font-size: 28px;
+  color: rgb(74, 74, 74);
 }
 
 .title{
     font-size: 40px;
     font-style: italic;
     color: rgb(34, 34, 34)
+}
+
+.date{
+  font-size: 20px;
+  color: rgb(34, 34, 34);
+  margin-top: -200;
 }
 
 img.painting{
