@@ -55,7 +55,6 @@ img.painting{
     border-width: 10px;
     border-color: white;
     border-radius: 10px;
-    /* border-color: rgb(113, 171, 220); */
     width: auto;
     cursor: pointer;
     transition-duration: .2s;
@@ -75,19 +74,21 @@ img.painting:hover{
   display: inline-block;
   overflow: hidden;
   height: 55vh;
+  width: auto;
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+  border-radius: 10px;
 }
 
-/* Inside a censor-box, let the image fill the frame without its own border */
 .censor-box > img.painting{
   border: none !important;
   border-radius: 0 !important;
   width: 100%;
   height: 100%;
-  object-fit: cover;              /* preserves aspect, no stretching */
 }
 
 
-/* Message overlay that sits inside the border */
 .censor-overlay{
   position: absolute; inset: 0;
   align-items: center; justify-content: center;
@@ -103,7 +104,6 @@ img.painting:hover{
   font-weight: 800;
 }
 
-/* Nice minimal button */
 .reveal-btn{
   width: 200px;
   height: 80px;
@@ -125,8 +125,8 @@ img.painting:hover{
 
 .censor-box.revealed .censor-overlay{ display: none; }
 .censor-box.revealed{
-    border-color: transparent;   /* keep width so layout doesn't jump */
-    overflow: visible;           /* let the image's ring show */
+    border-color: transparent;
+    overflow: visible;
 }
 .censor-box.revealed > img.painting{
     box-shadow: 0 0 0 var(--frame, 10px) #fff;
@@ -135,7 +135,7 @@ img.painting:hover{
 
 
 .recensor-btn{
-  position:absolute; bottom: 30px; right:210px;
+  position:absolute; bottom: 50px; right:220px;
   width: 200px;
   height: 80px;
   padding: 0;
