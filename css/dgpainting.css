@@ -2,14 +2,8 @@ body{
     background-image: url("../images/Paper Graphic.png");
 }
 
-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 55vh;
-    margin: 40px;
+.container{
+    margin-top: 10%;
 }
 
 .painting{
@@ -23,7 +17,7 @@ container{
 
 div.painting{
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 
 
@@ -111,13 +105,13 @@ img.painting:hover{
 
 /* Nice minimal button */
 .reveal-btn{
-    width: 200px;
-    height: 80px;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
+  width: 200px;
+  height: 80px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
   
   font-size: 48px;
   background:#fff; color:#111; font-weight:700; border:0; cursor:pointer;
@@ -141,15 +135,15 @@ img.painting:hover{
 
 
 .recensor-btn{
-  position:absolute; bottom: 0px; right:200px;
+  position:absolute; bottom: 30px; right:210px;
   width: 200px;
-    height: 80px;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-  
+  height: 80px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  rotate: 20deg;
   font-size: 48px;
   background:#111; color:#fff; font-weight:700; border:0; cursor:pointer;
 
@@ -169,30 +163,3 @@ img.painting:hover{
   opacity:1; pointer-events:auto;
 }
 
-
-.modal {
-  position: fixed; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(0,0,0,0.9);
-  z-index: 10000;
-
-  opacity: 0;                 /* invisible */
-  pointer-events: none;       /* clicks pass through */
-  transition: opacity .3s ease;
-}
-
-/* Shown state: visible + interactive */
-.modal.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-content {
-  max-height: 95vh;
-  border-radius: 25px;
-}
-
-.close{
-  position: absolute; top: 20px; right: 35px;
-  color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;
-}

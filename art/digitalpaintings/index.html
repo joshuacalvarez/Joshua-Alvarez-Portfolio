@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/dgpainting.css"/>
     <link rel="stylesheet" href="/css/navbar.css"/>
     <link rel="stylesheet" href="/css/loader.css"/>
+    <link rel="stylesheet" href="/css/modal.css"/>
 </head>
 <body>
     <div id="preloader">
@@ -22,9 +23,9 @@
 
     <div id="navbar-container"></div>
 
-    <div class="container" style="margin-top: 200px;">
+    <div class="container">
         <div class="painting">
-            <img class="painting" src="/images/art/Gray Scale.jpg" alt="Gray Scale" />
+            <img class="painting modalable" src="/images/art/paintings/Gray Scale.jpg" alt="Gray Scale" />
             <div class="description">
                 <p class="title">Gray Scale</p>
                 <p class="desc-text">Personal project that represents anhedonia</p>
@@ -34,7 +35,7 @@
         
         <div class="painting">
             <div class="censor-box">
-                <img class="painting" src="/images/art/SelfScarred.jpg" alt="Self Scarred" />
+                <img class="painting modalable" src="/images/art/paintings/SelfScarred.jpg" alt="Self Scarred" />
                 <div class="censor-overlay">
                     <p>Triggering Content</p>
                     <button type="button" class="reveal-btn">View</button>
@@ -49,7 +50,7 @@
         </div>
 
         <div class="painting">
-            <img class="painting" src="/images/art/HandOnMyHeart.jpg" alt="Hand on My Heart" />
+            <img class="painting modalable" src="/images/art/paintings/HandOnMyHeart.jpg" alt="Hand on My Heart" />
             <div class="description">
                 <p class="title">Hand on My Heart</p>
                 <p class="desc-text">Personal project that represents emotional pain</p>
@@ -58,7 +59,7 @@
         </div>
 
         <div class="painting">
-            <img class="painting" src="/images/art/SamArtwork.jpg" alt="Gray Scale" />
+            <img class="painting modalable" src="/images/art/paintings/SamArtwork.jpg" alt="Gray Scale" />
             <div class="description">
                 <p class="title">Valorant Character Adaptation</p>
                 <p class="desc-text">Portrait of an individual adapted to portray a video game character</p>
@@ -67,7 +68,7 @@
         </div>
 
         <div class="painting">
-            <img class="painting" src="/images/art/Sara Senior Project.jpg" alt="Gray Scale" />
+            <img class="painting modalable" src="/images/art/paintings/Sara Senior Project.jpg" alt="Gray Scale" />
             <div class="description">
                 <p class="title">2023 Senior Portrait</p>
                 <p class="desc-text">Portrait made for a highschool graduation</p>
@@ -76,9 +77,9 @@
         </div>
 
         <div class="painting">
-            <img class="painting" src="/images/art/Andrew_Senior_Project.jpg" alt="Gray Scale" />
-            <img class="painting" src="/images/art/Pacey_Senior_Project.jpg" alt="Gray Scale" />
-            <img class="painting" src="/images/art/Noah_Senior_Project.jpg" alt="Gray Scale" />
+            <img class="painting modalable" src="/images/art/paintings/Andrew_Senior_Project.jpg" alt="Gray Scale" />
+            <img class="painting modalable" src="/images/art/paintings/Pacey_Senior_Project.jpg" alt="Gray Scale" />
+            <img class="painting modalable" src="/images/art/paintings/Noah_Senior_Project.jpg" alt="Gray Scale" />
 
             <div class="description">
                 <p class="title">2022 Senior Portraits</p>
@@ -87,10 +88,11 @@
             </div>
         </div>
 
-    <!-- Modal  -->
-    <div class="modal" id="artModal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="imgExpanded" />
+        <!-- Modal  -->
+        <div class="modal" id="artModal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="imgExpanded" />
+        </div>
     </div>
 
 
