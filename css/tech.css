@@ -55,6 +55,10 @@ body{
     color: rgba(0, 0, 0, 0.6);
 }
 
+p {
+    font-size: 42px;
+}
+
 video{
     width: 80%;
     border: solid black 15px;
