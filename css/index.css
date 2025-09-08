@@ -5,6 +5,11 @@ body, html {
   overflow: hidden;
 }
 
+body{
+    background-image: url("../images/Paper Graphic.png");
+}
+
+
 .content {
   margin-top: 200px;
 }
@@ -26,6 +31,7 @@ body, html {
   display: block;
   pointer-events: none;
   transition: transform 0.3s ease;
+  margin:auto;
 }
 
 .hitbox {
@@ -109,7 +115,11 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9998; /* just below video overlay */
-  display: none; /* hidden by default */
-  pointer-events: auto; /* blocks clicks */
+  z-index: 9998;
+  display: none;
+  pointer-events: auto; 
+}
+
+.navbar-container{
+  opacity: .5;
 }

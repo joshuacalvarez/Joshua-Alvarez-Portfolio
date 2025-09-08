@@ -4,7 +4,10 @@
     <script>document.documentElement.classList.add('preloading');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tech Portfolio</title>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/loader.css" />
+    <link rel="stylesheet" href="/css/tech.css" />
 </head>
 <body>
     <div id="preloader">
@@ -16,6 +19,83 @@
             <div id="prePercent" class="percent">0%</div>
         </div>
     </div>
-    tech
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <div class="project">
+            <div class="demo">
+                <video autoplay muted loop playsinline width="640" class="hasbackground">
+                    <source src="/images/tech/Minesweeper Form.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video autoplay muted loop playsinline width="640" class="hasbackground">
+                    <source src="/images/tech/Minesweeper Web.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="description">
+                <div class="title">
+                    <p>Minesweeper</p>
+                </div>
+                <div class="text">
+                    <p>
+                        This was a school project, coded in C#, that was adapted as a Windows Form and a Website. In this project, there was a focus on separation of concerns, object oriented programming, and data handling. UX was also a high priority.
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="description">
+                <div class="title">
+                    <p>BookCook</p>
+                </div>
+                <div class="text">
+                    <p>
+                        This was a school project designed to be a social media platform for sharing recipes. The key focuses of this project were CRUD operations, data handling, UX, and authentication. This website was made using Spring Boot and Java.
+                </div>
+            </div>
+            <div class="demo">
+                <video autoplay muted loop playsinline width="640" class="hasbackground">
+                    <source src="/images/tech/BookCook Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="project">
+            <div class="demo">
+                <video autoplay muted loop playsinline width="640" class="hasbackground">
+                    <source src="/images/tech/Battleship Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="description">
+                <div class="title">
+                    <p>Battleship</p>
+                </div>
+                <div class="text">
+                    <p>
+                        This was a school project meant to function as Battleship in a Console App. All the logic was coded in Java, and some focuses were object oriented programming, separation of concerns, and implementing "greedy technique".
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="description">
+                <div class="title">
+                    <p>Music App</p>
+                </div>
+                <div class="text">
+                    <p>
+                        This was a school project that used SQL and Windows Forms to make a Music Application. The main focuses of this project were CRUD operations and SQL utilization. It was coded in C#.
+                </div>
+            </div>
+            <div class="demo">
+                <video autoplay muted loop playsinline width="640" class="hasbackground">
+                    <source src="/images/tech/MusicApp Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+<script src="/js/main.js"></script>
+<script src="/js/loader.js" defer></script>

@@ -1,0 +1,64 @@
+body{
+    background-image: url("../images/Paper Graphic.png");
+}
+
+* {
+    font-family: Tahoma;
+}
+
+.container{
+    margin: 8%;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10%;
+    /* background-color: rgba(255, 255, 255, .5); */
+    /* padding: 1%; */
+}
+
+.demo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 52%;
+    align-items: center;
+}
+
+.description{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.title{
+    font-weight: bold;
+    background-color: white;
+    border-radius: 0%;
+    text-align: center;
+    width: 70%;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.3));
+    margin-bottom: 2%;
+}
+
+.text{
+    background-color: white;
+    padding: 4%;
+    border-radius: 10%;
+    margin: 1%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+video{
+    width: 80%;
+    border: solid black 15px;
+    border-style: ridge;
+    border-radius: 1%;
+    margin: 1%;
+}
