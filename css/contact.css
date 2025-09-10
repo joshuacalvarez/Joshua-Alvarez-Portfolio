@@ -20,6 +20,7 @@ body{
     padding: 1%;
     border-radius: 5%;
     max-width: 45%;
+    max-height: 80vh;
 }
 
 .imgLink{
@@ -33,6 +34,7 @@ body{
     display: flex;
     width: 100%;
     font-weight: bold;
+    align-items: center;
 }
 
 .info{
@@ -53,12 +55,16 @@ body{
 }
 
 .description{
-    font-size: 30px;
     width: 75%;
     text-align: center;
     background-color: white;
     padding: 4%;
     border-radius: 10px;
+    font-size: 28px;
+}
+
+p {
+    font-size: 35px;
 }
 
 a {
