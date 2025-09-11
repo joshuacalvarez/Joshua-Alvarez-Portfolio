@@ -135,7 +135,7 @@ img.painting:hover{
 
 
 .recensor-btn{
-  position:absolute; bottom: 60px; right:200px;
+  position:absolute; bottom: 10%; right:15%;
   width: 150px;
   height: 80px;
   padding: 0;

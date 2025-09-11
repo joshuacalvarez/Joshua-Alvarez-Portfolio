@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/css/navbar.css" />
         <link rel="stylesheet" href="/css/loader.css" />
         <link rel="stylesheet" href="/css/button.css" />
+        <link rel="stylesheet" href="/css/modal.css" />
     </head>
     <body>
         <div id="preloader">
@@ -21,6 +22,70 @@
                 </div>
             </div>
             <div id="navbar-container"></div>
+            <div class="container">
+                <div class="project">
+                    <div class="graphics">
+                        <img src="/images/art/graphics/InterestingPlacePosterTouchup.jpg" class="modalable">
+                    </div>
+                    <div class="description">
+                        <p>This student project aimed to design and create a grayscale poster that depicts a specific place of interest along with its value proposition. It was originally created through paper collage, but was touched up in Photoshop.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="description">
+                        <p>In this student project, the objective was to design the same subject in several different color schemes and styles (Monochrome, Complementary, and Split-Complementary).</p>
+                    </div>
+                    <div class="graphics">
+                        <img src="/images/art/graphics/Monochrome-ColorStudies.jpg" class="modalable">
+                        <img src="/images/art/graphics/Complementary-ColorStudies.jpg" class="modalable">
+                        <img src="/images/art/graphics/Split-ColorStudies.jpg" class="modalable">
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="graphics">
+                        <img src="/images/art/graphics/Notan.jpg" class="modalable">
+                    </div>
+                    <div class="description">
+                        <p>This student project aimed to design a Japanese Notan that evokes delight through the balance of attractive composition and playful symmetry. I opted for a roller coaster theme to demonstrate an engaging story and nod to my love of amusement parks.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="description">
+                        <p>The objective of this student project was to create an appealing monogram logo for an elegant eatery, portraying the quality of experience that would be offered.</p>
+                    </div>
+                    <div class="graphics">
+                        <img src="/images/art/graphics/Monogram-Logo.jpg" class="modalable">
+                        <img src="/images/art/graphics/Monogram Mockup1.jpg" class="modalable">
+                        <img src="/images/art/graphics/Monogram Mockup2.jpg" class="modalable">
+                        <img src="/images/art/graphics/Monogram-StyleGuide.jpg" class="modalable">
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="graphics">
+                        <img src="/images/art/graphics/Alvarez_Joshua_GigPoster.jpg" class="modalable">
+                    </div>
+                    <div class="description">
+                        <p>In this student project, the goal was to promote a conceptual gig for a specific group.  Although VeggieTales is already an established brand with executed live shows, this gig in particular is entirely fictional.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="description">
+                        <p>Using varying techniques and media, this student project aimed to model an animal in different functions: a corporate logo, a gesture illustration, and a transformative storybook illustration. (And encyclopedic is on pencil & paper webpage)</p>
+                    </div>
+                    <div class="graphics">
+                        <img src="/images/art/graphics/Logo-Penguin.jpg" class="modalable">
+                        <img src="/images/art/graphics/Gesture-Penguin.jpg" class="modalable">
+                        <img src="/images/art/graphics/Transformation-Penguin.jpg" class="modalable">
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Modal  -->
+        <div class="modal" id="artModal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="imgExpanded" />
+        </div>
 
             <button class="button" onclick="window.location.href='../'">Back to Art</button>
             <button class="hire" onclick="window.location.href='/contact/'">Hire Me</button>
