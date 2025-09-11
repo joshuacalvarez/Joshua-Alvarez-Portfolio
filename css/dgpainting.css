@@ -135,16 +135,16 @@ img.painting:hover{
 
 
 .recensor-btn{
-  position:absolute; bottom: 80px; right:200px;
-  width: 200px;
+  position:absolute; bottom: 60px; right:200px;
+  width: 150px;
   height: 80px;
   padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  rotate: 20deg;
-  font-size: 48px;
+  rotate: 25deg;
+  font-size: 36px;
   background:#111; color:#fff; font-weight:700; border:0; cursor:pointer;
 
   transition-duration: .2s;
