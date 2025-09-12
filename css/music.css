@@ -1,3 +1,90 @@
 body{
     background-image: url("../images/Paper Graphic.png");
 }
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+.streaming{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.streaming img{
+    max-width: 15%;
+    background-color: white;
+    padding: 2%;
+    transition-duration: .2s;
+    border-radius: 20%;
+}
+
+.streaming img:hover{
+    transform: scale(1.03);
+}
+
+.streaming img:active {
+  transform: translateY(2px);
+}
+
+.music{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+    width: 90%;
+}
+
+.song{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 28%;
+}
+
+.song img{
+    max-width: 95%;
+    display: block;
+    box-shadow: 10px 10px 10px rgba(75, 76, 81, 0.5);
+    transition: filter .2s ease;
+}
+
+.song audio{
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    width: 90%;
+    z-index: 2;
+    color-scheme: dark;
+}
+
+
+.song audio::-webkit-media-controls-enclosure{ 
+  background: transparent; box-shadow:none;
+}
+.song audio::-webkit-media-controls-panel{
+  background: transparent;
+}
+
+.backdrop{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(75,76,81,.5);
+}
+
+.backdrop::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.35) 35%,
+    rgba(0,0,0,0)   70%
+  );
+  pointer-events:none;
+  z-index:1;
+}

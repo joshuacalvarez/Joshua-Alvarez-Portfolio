@@ -30,7 +30,7 @@ body{
     height: auto;
     max-height: 600px; 
     display: block;
-    box-shadow: 10px 10px 10px grey;
+    box-shadow: 10px 10px 10px rgba(75, 76, 81, 0.5);
     cursor: pointer;
     transition-duration: .2s;
     object-fit: contain;
@@ -39,6 +39,7 @@ body{
 .graphics img:hover{
     transform: scale(1.017);
 }
+
 
 .description{
     width: 42%;
