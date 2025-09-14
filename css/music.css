@@ -6,7 +6,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 8%;
+    margin-top: 10%;
 }
 
 .streaming{
@@ -54,7 +54,7 @@ body{
 
 .song audio{
     position: absolute;
-    left: 1px;
+    left: 10px;
     bottom: 1px;
     width: 90%;
     z-index: 2;
