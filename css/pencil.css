@@ -28,18 +28,25 @@ body{
     justify-content: center;
     overflow: hidden;
     margin: 2%;
-    border-style: solid;
-    border-width: 10px;
-    border-color: rgba(0, 0, 0, 0.95);
-    border-radius: 10px;
+    
 }
 
 .paper{
-    width: 100%;
+    width: auto;
+}
+
+img{
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgba(121, 121, 121, 0.5);
+    border-radius: 10px;
+    width: auto;
+    max-width: 100%;
 }
 
 .text{
-    color: white;
+    color: black;
+    /* font-weight: bold; */
     display:flex;
     flex-direction: column;
     position: absolute;
@@ -49,11 +56,12 @@ body{
     text-align: center;
     background: linear-gradient(
         to top, 
-        rgba(0, 0, 0, 0.7) 5%,   /* solid at bottom */
-        rgba(0, 0, 0, 0.0) 100%  /* fully transparent at top */
+        rgba(255, 255, 255, .9) 5%,   /* solid at bottom */
+        rgba(255, 255, 255, 0) 100%  /* fully transparent at top */
     );
     pointer-events: none;
     justify-content: end;
+    border-radius: 10px;
 }
 
 p{
@@ -72,4 +80,37 @@ p{
 
 * {
     font-family: Tahoma;
+}
+
+/* --- phones (≤480px) --- */
+@media (max-width: 480px){
+  .drawing{
+    height: auto;
+  }
+  .text{ height: 50%; }
+    p{ font-size: 18px; }
+    .date{ font-size: 16px; margin-bottom: 10px; }
+}
+
+/* --- small tablets (481–768px) --- */
+@media (min-width: 481px) and (max-width: 768px){
+    .drawing{
+        height: auto;
+    }
+    .text{ height: 50%; }
+    p{ font-size: 20px; }
+    .date{ font-size: 18px; }
+}
+
+/* --- small laptops (769–1024px) --- */
+@media (min-width: 769px) and (max-width: 1200px){
+    .drawing{
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1200px){
+    .drawing{
+        /* height: auto; */
+    }
 }

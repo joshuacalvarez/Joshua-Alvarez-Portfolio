@@ -19,6 +19,7 @@
   max-height: 95vh;
   max-width: 100%;
   border-radius: 25px;
+  border: none;
 }
 
 .close{
