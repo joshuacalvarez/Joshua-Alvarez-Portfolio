@@ -1,14 +1,14 @@
-body{
+body {
     background-image: url("../images/Paper Graphic.png");
 }
 
-.container{
+.container {
     display: flex;
     margin-top: 5%;
     flex-wrap: wrap;
 }
 
-.project{
+.project {
     display: flex;
     width: 90%;
     margin: auto;
@@ -16,7 +16,7 @@ body{
     margin-bottom: 2%;
 }
 
-.graphics{
+.graphics {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
@@ -24,11 +24,11 @@ body{
     align-items: center;
 }
 
-.graphics img{
-    flex: 1 1 250px;  
+.graphics img {
+    flex: 1 1 250px;
     max-width: 300px;
     height: auto;
-    max-height: 600px; 
+    max-height: 600px;
     display: block;
     box-shadow: 10px 10px 10px rgba(75, 76, 81, 0.5);
     cursor: pointer;
@@ -36,12 +36,11 @@ body{
     object-fit: contain;
 }
 
-.graphics img:hover{
+.graphics img:hover {
     transform: scale(1.017);
 }
 
-
-.description{
+.description {
     width: 42%;
     max-height: 80%;
     display: flex;
@@ -49,20 +48,79 @@ body{
     justify-content: center;
     background-color: white;
     border-radius: 10px;
-    margin:auto;
-    color:rgb(89, 89, 89);
+    margin: auto;
+    color: rgb(89, 89, 89);
     text-align: center;
-
 }
 
-.description p{
+.description p {
     font-size: 30px;
     padding: 10%;
-
 }
 
 .graphics img:only-child {
-    flex:unset;
+    flex: unset;
     max-width: 580px;
     box-shadow: 10px 10px 10px grey;
+}
+
+
+/* phones (≤480px) */
+@media (max-width: 480px) {
+    .project {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .graphics, 
+    .description {
+        width: 100%;
+    }
+
+    .description p {
+        font-size: 18px;
+        padding: 6%;
+    }
+
+    .graphics img {
+        max-height: 400px;
+    }
+}
+
+/* tablets (481px–768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    .project {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .graphics, 
+    .description {
+        width: 100%;
+    }
+
+    .description p {
+        font-size: 22px;
+        padding: 8%;
+    }
+
+    .graphics img {
+        max-height: 500px;
+    }
+}
+
+/* small laptops (769px–1024px) */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .project {
+        margin-top: 15%;
+    }
+    .graphics {
+        width: 60%;
+    }
+    .description {
+        width: 35%;
+    }
+    .description p {
+        font-size: 26px;
+    }
 }
