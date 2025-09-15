@@ -6,6 +6,9 @@ body{
 .container{
     display: flex;
     justify-content: space-evenly;
+    height: 90vh;
+    margin: auto;
+    margin-top: 2%;
 }
 
 .links{
@@ -17,14 +20,13 @@ body{
     margin-top: 7%;
     margin-left: -2%;
     background-color: rgba(255, 255, 255, 1);
-    padding: 2%;
     border-radius: 5%;
     max-width: 47%;
     max-height: 80vh;
 }
 
 .imgLink{
-    max-width: 20%;
+    max-width: 16%;
     height: auto;
     display: inline-block;
     margin-right: 5%;
@@ -35,6 +37,7 @@ body{
     width: 90%;
     font-weight: bold;
     align-items: center;
+    margin: auto;
 }
 
 .info{
@@ -55,7 +58,7 @@ body{
 }
 
 .description{
-    width: 75%;
+    width: 85%;
     text-align: center;
     background-color: white;
     padding: 4%;
@@ -71,4 +74,81 @@ a {
     color: inherit;
     font-weight: bold;
     text-decoration: none;
+}
+
+@media (max-width: 1500px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    .info{
+        max-width:80%;
+    }
+    .links{
+        max-width: 80%;
+        padding: 2%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 1200px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+    }
+    .info{
+        max-width:80%;
+    }
+    .links{
+        max-width: 80%;
+        padding: 2%;
+    }
+    p{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 768px){
+    .profile{
+        width: 50%;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        max-width:90%;
+    }
+    .links{
+        max-width: 90%;
+        padding: 2%;
+    }
+    p{
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 480px){
+    .profile{
+        width: 50%;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        max-width:90%;
+    }
+    .links{
+        max-width: 90%;
+        padding: 2%;
+    }
+    p{
+        font-size: 100%;
+    }
+    .description{
+        font-size: 200%;
+    }
 }

@@ -71,3 +71,47 @@ p{
 #content{
     height: 80vh;
 }
+
+/* phones (≤480px) */
+@media (max-width: 480px) {
+    .project {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .graphics, 
+    .description {
+        width: 100%;
+    }
+
+    p {
+        font-size: 30px;
+        padding: 6%;
+    }
+
+    .graphics img {
+        max-height: 400px;
+    }
+}
+
+/* tablets (481px–768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    p {
+        font-size: 32px;
+        padding: 6%;
+    }
+}
+
+/* small laptops (769px–1024px) */
+@media (max-width: 1200px) and (min-width: 769px) {
+    p {
+        font-size: 26px;
+    }
+    .card{
+        width: 30%;
+        height: 40%;
+    }
+    .Card-Containers{
+        margin-top: 20%;
+    }
+}
