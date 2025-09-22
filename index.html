@@ -1,64 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <script>document.documentElement.classList.add('preloading');</script>
-   <title>Joshua Alvarez Portfolio</title>
-   <link rel="stylesheet" href="/css/mobile.css" />
-   <link rel="stylesheet" href="css/index.css"/>
-   <link rel="stylesheet" href="css/loader.css"/>
-   <link rel="stylesheet" href="css/navbar.css"/>
+  <script>document.documentElement.classList.add('preloading');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joshua Alvarez Portfolio</title>
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/loader.css" />
 </head>
 <body>
-   <div id="preloader">
-      <div class="loader">
-         <div id="logo-bar">
-            <img src="/images/YouTube Logo.svg" class="logo bg" alt="Lumpy Animations">
-            <img src="/images/YouTube Logo.svg" class="logo fg" alt="" aria-hidden="true">
-         </div>
-         <div id="prePercent" class="percent">0%</div>
+  <div id="preloader">
+    <div class="loader">
+      <div id="logo-bar">
+        <img src="/images/YouTube Logo.svg" class="logo bg" alt="Lumpy Animations">
+        <img src="/images/YouTube Logo.svg" class="logo fg" alt="" aria-hidden="true">
       </div>
-   </div>
+      <div id="prePercent" class="percent">0%</div>
+    </div>
+  </div>
 
-   <div id="navbar-container"></div>
-   <div id="pageBlocker"></div>
+  <div id="navbar-container"></div>
+  <div id="pageBlocker"></div>
 
-   <div class="content-body">
-      <div class="hitbox tech-click"></div>
-      <div class="hitbox art-click"></div>
+  <div class="content-body">
+    <div class="hitbox tech-click"></div>
+    <div class="hitbox art-click"></div>
 
-      <div class="click-area tech">
-         <img class="desktop" src="images/Tech Paper.png" alt="Tech Button">
-         <img class="mobile" src="/images/PaperMobileTech-01.png" alt="Tech Button">
-      </div>
+    <div class="click-area tech">
+      <img class="desktop" src="/images/Tech Paper.png" alt="Tech Button">
+      <img class="mobile" src="/images/PaperMobileTech-01.png" alt="Tech Button">
+    </div>
 
-      <div class="click-area art">
-         <img class="desktop" src="images/Art Paper.png" alt="Art Button">
-         <img class="mobile" src="/images/PaperMobileArt-02.png" alt="Art Button">
-      </div>
+    <div class="click-area art">
+      <img class="desktop" src="/images/Art Paper.png" alt="Art Button">
+      <img class="mobile" src="/images/PaperMobileArt-02.png" alt="Art Button">
+    </div>
 
-      <div class="video-overlay" id="artVideoOverlay">
-         <video id="artIntroVideo" autoplay muted playsinline>
-            <source src="images/Art Paper Animation Mobile.webm" type="video/webm" media="(max-width: 768px)">
-            <source src="images/Art Paper Animation Mobile.mp4" type="video/mp4" media="(max-width: 768px)">
-            <source src="images/Art Paper Animation.webm" type="video/webm">
-            <source src="images/Art Paper Animation.mp4" type="video/mp4">
-         </video>
-      </div>
+    <div class="video-overlay" id="artVideoOverlay">
+      <video id="artIntroVideo" autoplay muted playsinline preload="none">
+        <source src="/images/Art Paper Animation Mobile.webm" type="video/webm" media="(max-width: 768px)">
+        <source src="/images/Art Paper Animation Mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+        <source src="/images/Art Paper Animation.webm" type="video/webm">
+        <source src="/images/Art Paper Animation.mp4" type="video/mp4">
+      </video>
+    </div>
 
-      <div class="video-overlay" id="techVideoOverlay">
-         <video id="techIntroVideo" autoplay muted playsinline>
-            <source src="images/Tech Paper Animation Mobile.webm" type="video/webm" media="(max-width: 768px)">
-            <source src="images/Tech Paper Animation Mobile.mp4" type="video/mp4" media="(max-width: 768px)">
-            <source src="images/Tech Paper Animation.webm" type="video/webm">
-            <source src="images/Tech Paper Animation.mp4" type="video/mp4">
-         </video>
-      </div>
+    <div class="video-overlay" id="techVideoOverlay">
+      <video id="techIntroVideo" autoplay muted playsinline preload="none">
+        <source src="/images/Tech Paper Animation Mobile.webm" type="video/webm" media="(max-width: 768px)">
+        <source src="/images/Tech Paper Animation Mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+        <source src="/images/Tech Paper Animation.webm" type="video/webm">
+        <source src="/images/Tech Paper Animation.mp4" type="video/mp4">
+      </video>
+    </div>
 
-      <img src="images/Web Art Under Graphic.png" id="Under-Art">
-      <img src="images/Web Tech Under Graphic.png" id="Under-Tech">
-   </div>
+    <img src="/images/Web Art Under Graphic.png" id="Under-Art" alt="">
+    <img src="/images/Web Tech Under Graphic.png" id="Under-Tech" alt="">
+  </div>
+
+  <script src="/js/index.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/loader.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      document.documentElement.classList.remove('preloading');
+    });
+  </script>
 </body>
 </html>
-<script src="js/index.js"></script>
-<script src="js/main.js"></script>
-<script src="js/loader.js"></script>
