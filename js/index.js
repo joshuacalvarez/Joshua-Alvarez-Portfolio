@@ -14,47 +14,66 @@ window.addEventListener("DOMContentLoaded", () => {
   const artUnder = document.getElementById("Under-Art");
   const techUnder = document.getElementById("Under-Tech");
 
+  const mq = window.matchMedia("(max-width: 768px)");
 
+  function applyVideoSources(){
+    [artIntroVideo, techIntroVideo].forEach(v => {
+      if(!v) return;
+      const src = mq.matches ? v.dataset.srcMobile : v.dataset.srcDesktop;
+      
+      if (src && v.dataset.activeSrc !== src){
+        v.src = src;
+        v.onload();
+        v.dataset.activeSrc = src;
+      }
+    })
+  }
+
+
+  applyVideoSources();
 
   // ART VIDEO
-  if (artHitbox && artVideoOverlay && artIntroVideo) {
+   if (artHitbox && artVideoOverlay && artIntroVideo) {
     artHitbox.addEventListener("click", (e) => {
-      // Show the video overlay
       e.preventDefault();
 
-      document.getElementById("pageBlocker").style.display = "block"; // activate blocker
+      document.getElementById("pageBlocker").style.display = "block";
 
-      artPaper.style.display = "none";
-      techPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
+      if (artPaper) artPaper.style.display = "none";
+      if (techPaper?.querySelector("img")) {
+        techPaper.querySelector("img").style.filter =
+          "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
+      }
       artVideoOverlay.style.display = "block";
-      artUnder.style.display = "block";
-    
-      artIntroVideo.play();
+      if (artUnder) artUnder.style.display = "block";
 
-      // Redirect when video ends
+      safePlay(artIntroVideo);
+
       artIntroVideo.onended = () => {
-        document.getElementById("pageBlocker").style.display = "none"; // remove blocker
+        document.getElementById("pageBlocker").style.display = "none";
         window.location.href = "/art/";
       };
     });
   }
 
-  // TECH VIDEO
-  if (techHitbox && techVideoOverlay && techIntroVideo){
+  if (techHitbox && techVideoOverlay && techIntroVideo) {
     techHitbox.addEventListener("click", (e) => {
-      //Show overlay
       e.preventDefault();
 
-      document.getElementById("pageBlocker").style.display = "block"; // activate blocker
+      document.getElementById("pageBlocker").style.display = "block";
 
-      techPaper.style.display = "none";
-      artPaper.querySelector("img").style.filter = "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
+      if (techPaper) techPaper.style.display = "none";
+      if (artPaper?.querySelector("img")) {
+        artPaper.querySelector("img").style.filter =
+          "brightness(0.5) blur(2px) drop-shadow(0 0 20px rgba(0, 0, 0, 0.3))";
+      }
       techVideoOverlay.style.display = "block";
-      techUnder.style.display = "block";
+      if (techUnder) techUnder.style.display = "block";
 
+      safePlay(techIntroVideo);
 
       techIntroVideo.onended = () => {
-        document.getElementById("pageBlocker").style.display = "none"; // remove blocker
+        document.getElementById("pageBlocker").style.display = "none";
         window.location.href = "/tech/";
       };
     });

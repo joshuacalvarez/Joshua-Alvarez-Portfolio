@@ -69,7 +69,7 @@ p{
 }
 
 #content{
-    height: 80vh;
+    height: 100%;
 }
 
 /* phones (≤480px) */
@@ -92,10 +92,15 @@ p{
     .graphics img {
         max-height: 400px;
     }
+
+    .Card-Containers{
+        height: auto;
+    }
+
 }
 
 /* tablets (481px–768px) */
-@media (max-width: 768px) and (min-width: 481px) {
+@media (max-width: 768px){
     p {
         font-size: 32px;
         padding: 6%;
@@ -103,7 +108,7 @@ p{
 }
 
 /* small laptops (769px–1024px) */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1200px){
     p {
         font-size: 26px;
     }

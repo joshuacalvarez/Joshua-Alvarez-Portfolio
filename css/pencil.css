@@ -82,14 +82,17 @@ p{
     font-family: Tahoma;
 }
 
+
 /* --- phones (≤480px) --- */
 @media (max-width: 480px){
   .drawing{
     height: auto;
   }
-  .text{ height: 50%; }
+  .text{ height: 50%; bottom: -2%; }
     p{ font-size: 18px; }
     .date{ font-size: 16px; margin-bottom: 10px; }
+
+    
 }
 
 /* --- small tablets (481–768px) --- */
@@ -97,7 +100,7 @@ p{
     .drawing{
         height: auto;
     }
-    .text{ height: 50%; }
+    .text{ height: 50%; bottom: -1%;}
     p{ font-size: 20px; }
     .date{ font-size: 18px; }
 }

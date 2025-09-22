@@ -5,14 +5,14 @@
 
 .navcontainer {
   background-image: url('../images/Pencil Navbar.png');
-  background-size: 100%;
+  background-size: auto;
   overflow: hidden;
   background-position: right top;
   top: 0;
   left: 0;
   right: 0;
-  height: 14%;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: left;
   z-index: 9999;
@@ -28,8 +28,9 @@
   align-items: center;
   justify-content: left;
   padding: 0 20px;
-  height: 80%;
+  height: auto;
   width: 80%;
+  margin-top: -2%;
 }
 
 .navbar ul {
