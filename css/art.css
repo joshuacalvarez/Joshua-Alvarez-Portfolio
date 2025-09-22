@@ -32,6 +32,21 @@ p{font-size:40px;font-weight:bold;color:rgb(40,40,40)}
 .button:hover,.hire:hover{transform:scale(1.05)}
 .button:active,.hire:active{transform:translateY(2px)}
 
+
+/* hide fixed buttons while preloader visible */
+#preloader + .button,
+#preloader + .hire,
+#preloader ~ .button,
+#preloader ~ .hire {
+  display: none;
+}
+
+body:not(.preloading) .button,
+body:not(.preloading) .hire {
+  display: block;
+}
+
+
 @media (max-width:1200px){
   p{font-size:26px}
   .card{width:30%;height:40%}
