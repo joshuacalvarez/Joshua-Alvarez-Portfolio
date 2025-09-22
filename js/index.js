@@ -11,30 +11,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const techUnder = document.getElementById("Under-Tech");
   const mq = window.matchMedia("(max-width: 768px)");
 
-  function setVideoSrc(video) {
-    if (!video) return;
-    const mobile = video.dataset.srcMobile;
-    const desktop = video.dataset.srcDesktop;
-    const wanted = mq.matches ? (mobile || desktop) : (desktop || mobile);
-    if (!wanted) return;
-    if (video.dataset.activeSrc !== wanted) {
-      try { video.pause(); } catch {}
-      video.src = wanted;
-      video.load();
-      video.dataset.activeSrc = wanted;
-    }
-  }
-
-  function applyVideoSources() {
-    [artIntroVideo, techIntroVideo].forEach(setVideoSrc);
-  }
-
-  if (typeof mq.addEventListener === "function") {
-    mq.addEventListener("change", applyVideoSources);
-  } else {
-    mq.addListener(applyVideoSources);
-  }
-
   function safePlay(v) {
     if (!v) return;
     try { v.currentTime = 0; } catch {}
@@ -45,11 +21,6 @@ window.addEventListener("DOMContentLoaded", () => {
         v.play().catch(()=>{});
       });
     }
-  }
-
-  function playWithCorrectSrc(video) {
-    applyVideoSources();
-    safePlay(video);
   }
 
   function routeOnEnd(video, href, onBeforeNav) {
@@ -77,10 +48,16 @@ window.addEventListener("DOMContentLoaded", () => {
     armTimeout();
   }
 
-  applyVideoSources();
-
+  // ART
   if (artHitbox && artVideoOverlay && artIntroVideo) {
     artHitbox.addEventListener("click", (e) => {
+      // Mobile → just route, no animation
+      if (mq.matches) {
+        window.location.assign("/art/");
+        return;
+      }
+
+      // Desktop → keep your current animation flow
       e.preventDefault();
       const blocker = document.getElementById("pageBlocker");
       if (blocker) blocker.style.display = "block";
@@ -91,15 +68,23 @@ window.addEventListener("DOMContentLoaded", () => {
       }
       artVideoOverlay.style.display = "block";
       if (artUnder) artUnder.style.display = "block";
-      playWithCorrectSrc(artIntroVideo);
+      safePlay(artIntroVideo);
       routeOnEnd(artIntroVideo, "/art/", () => {
         if (blocker) blocker.style.display = "none";
       });
     });
   }
 
+  // TECH
   if (techHitbox && techVideoOverlay && techIntroVideo) {
     techHitbox.addEventListener("click", (e) => {
+      // Mobile → just route, no animation
+      if (mq.matches) {
+        window.location.assign("/tech/");
+        return;
+      }
+
+      // Desktop → keep your current animation flow
       e.preventDefault();
       const blocker = document.getElementById("pageBlocker");
       if (blocker) blocker.style.display = "block";
@@ -110,7 +95,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
       techVideoOverlay.style.display = "block";
       if (techUnder) techUnder.style.display = "block";
-      playWithCorrectSrc(techIntroVideo);
+      safePlay(techIntroVideo);
       routeOnEnd(techIntroVideo, "/tech/", () => {
         if (blocker) blocker.style.display = "none";
       });
@@ -118,6 +103,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Keep your existing pageshow/unload handlers as-is
 window.addEventListener("pageshow", (event) => {
   const nav = performance.getEntriesByType("navigation")[0];
   if (event.persisted || (nav && nav.type === "back_forward")) {

@@ -120,4 +120,19 @@ body {
     transform: none;
     filter: none;
   }
+
+  .hitbox.tech-click {
+  top: 0;
+  height: 50%;
+  clip-path: none;
+}
+
+.hitbox.art-click {
+  top: auto;      /* override base top */
+  bottom: 0;
+  height: 50%;
+  clip-path: none;
+}
+
+
 }
