@@ -8,11 +8,13 @@ body{
 
 .container{
     margin: 8%;
+    margin-top: 12%;
 }
 
 .project{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     margin-bottom: 10%;
 
@@ -59,6 +61,7 @@ p {
 }
 
 video{
+    max-height: 90vh;
     width: 80%;
     border: solid black 15px;
     border-style: ridge;
