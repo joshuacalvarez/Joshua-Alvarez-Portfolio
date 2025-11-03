@@ -3,4 +3,4 @@
 
 Don't be shy, go explore it!!! :)
 
-https://joshuacalvarez.com/
+[![Visit my site](Gitub/ThumbnailPreview.png)](https://joshuacalvarez.com)
