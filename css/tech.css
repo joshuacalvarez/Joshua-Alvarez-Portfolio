@@ -60,6 +60,24 @@ p {
     font-size: 36px;
 }
 
+.link{
+    font-size: 36px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s;
+}
+
+.link:hover{
+    color: #71abdc;
+    transform: scale(1.1);  
+}
+
 video{
     max-height: 90vh;
     width: 80%;
