@@ -57,11 +57,6 @@ h1 {
 
 video {
     max-height: 90vh;
-    width: 85%;
-    border: solid black 15px;
-    border-style: ridge;
-    border-radius: 1%;
-    margin: 1%;
 }
 
 .step {
@@ -81,11 +76,12 @@ video {
 }
 
 .display {
-    width: 78%;
+    width: 73%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .display-top {
@@ -94,6 +90,8 @@ video {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .description {
@@ -141,15 +139,11 @@ video {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    max-width: 45%;
-    height: 80%;
     margin: 1%;
-    gap: 10%;
+    gap: 2%;
 }
 
 .sub-vertical-photo img {
-    max-width: 95%;
-    max-height: 95%;
     margin: auto;
     border: solid black 10px;
     border-style: ridge;
@@ -157,10 +151,56 @@ video {
 }
 
 .photo {
-    max-width: 85%;
-    max-height: 90vh;
+    max-height: 85vh;
     margin: auto;
     border: solid black 15px;
     border-style: ridge;
     border-radius: 1%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 25px;
+}
+
+.media-wrapper:hover .text-overlay {
+    opacity: 1;
+}
+
+
+.media-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 1%;
+    overflow: hidden;
+    /* width: 90%; */
+}
+
+.media-wrapper video,
+.media-wrapper img {
+    display: block;
+    height: auto;
+
+    border: solid black 15px;
+    border-style: ridge;
+    border-radius: 1%;
+    box-sizing: border-box;
 }
