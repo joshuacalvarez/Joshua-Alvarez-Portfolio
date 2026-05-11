@@ -55,9 +55,6 @@ h1 {
     font-size: 35px;
 }
 
-video {
-    max-height: 90vh;
-}
 
 .step {
     display: flex;
@@ -203,4 +200,84 @@ video {
     border-style: ridge;
     border-radius: 1%;
     box-sizing: border-box;
+}
+
+/* ---------- MOBILE / TABLET ---------- */
+@media (max-width: 900px) {
+
+    .container {
+        margin-top: 18%;
+    }
+
+    .title {
+        width: 92%;
+        max-height: none;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 32px;
+    }
+
+    .title p {
+        font-size: 18px;
+    }
+
+    .step-title {
+        width: 70%;
+        max-height: none;
+        padding: 10px;
+    }
+
+    .step-title p {
+        font-size: 28px;
+    }
+
+    .step,
+    .step-top {
+        flex-direction: column;
+        width: 95%;
+        gap: 20px;
+    }
+
+    .display,
+    .display-top,
+    .description,
+    .description-top {
+        width: 100%;
+    }
+
+    .description,
+    .description-top {
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .description p,
+    .description-top p {
+        font-size: 20px;
+    }
+
+    .sub-vertical-photo {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .photo,
+    video {
+        max-width: 100%;
+        max-height: 75vh;
+    }
+
+    .text-overlay {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .media-wrapper {
+        margin: 0;
+    }
 }
