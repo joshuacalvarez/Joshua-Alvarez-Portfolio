@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>document.documentElement.classList.add('preloading');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Portfolio</title>
+    <link rel="stylesheet" href="/css/mobile.css" />
+    <link rel="stylesheet" href="/css/loader.css" />
+    <link rel="stylesheet" href="/css/button.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/seniorproject.css" />
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader">
+            <div id="logo-bar">
+                <img src="/images/YouTube Logo.svg" class="logo bg" alt="Lumpy Animations">
+                <img src="/images/YouTube Logo.svg" class="logo fg" alt="" aria-hidden="true">
+            </div>
+            <div id="prePercent" class="percent">0%</div>
+        </div>
+    </div>
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <div class="title">
+            <h1>Senior Project</h1>
+            <p>Dancing Water Feature</p>
+        </div>
+        <div class="step-title">
+            <p>Overview</p>
+        </div>
+        <div class="step">
+            <div class="display">
+                <video autoplay muted loop playsinline width="640" class="hasbackground" preload="metadata">
+                    <source src="/images/tech/SeniorProject/DancingVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="sub-vertical-photo">
+                    <img src="/images/tech/SeniorProject/HomeScreen.png" alt="Dancing Water Feature" />
+                    <img src="/images/tech/SeniorProject/DanceScreen.png" alt="Dancing Water Feature" />
+                </div>
+            </div>
+            <div class="description">
+                <div class="text">
+                    <p>
+                        As the software developer I designed and developed the software for a music-reactive dancing
+                        water fountain system using React Native, audio frequency analysis, and Bluetooth Low Energy
+                        (BLE) communication. I built the mobile application that captured and processed live audio data,
+                        then translated it into synchronized real-time water pump and LED lighting effects through
+                        communication with a microcontroller.
+
+                </div>
+            </div>
+        </div>
+        <div class="step-title">
+            <p>Initial Design</p>
+        </div>
+        <div class="step">
+            <div class="description">
+                <div class="text">
+                    <p>
+                        In the first phase of design, I developed a JavaScript web application that analyzed
+                        uploaded audio tracks using FFT processing and split the music into frequency bands. On the UI,
+                        users could select from uploaded music files and see a visualizer that represented the audio
+                        frequencies in real-time.
+                    </p>
+
+                </div>
+            </div>
+            <div class="display">
+                <video autoplay muted loop playsinline width="640" class="hasbackground" preload="metadata">
+                    <source src="/images/tech/SeniorProject/FirstWepAppVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="step">
+            <div class="display">
+                <video autoplay muted loop playsinline width="640" class="hasbackground" preload="metadata">
+                    <source src="/images/tech/SeniorProject/SecondWebAppVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="/images/tech/SeniorProject/BowlPhoto.jpg" class="photo">
+            </div>
+            <div class="description">
+                <div class="text">
+                    <p>
+                        I refined and improved the original web application by adding adjustable sensitivity and
+                        threshold sliders to affect the audio processing, a color picker to preview LED effects on the
+                        visualizer, and means to connect to a microcontroller (Wi-Fi or COM port). The microcontroller
+                        connection would allow pumps to be turned on and off to react to the real-time audio data.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="step-title">
+            <p>Mobile App</p>
+        </div>
+        <div class="step">
+            <div class="description">
+                <div class="text">
+                    <p>
+                        Due to issues with the web application (such as latency, reliable microcontroller communication, and portability), I decided to switch the design to a mobile application using React Native to better suit the team's needs.
+                    </p>
+
+                </div>
+            </div>
+            <div class="display">
+                <img src="/images/tech/SeniorProject/AppWireframe.png" class="photo">
+            </div>
+        </div>
+    </div>
+    <button class="button" onclick="window.location.href='../'">Back to Tech</button>
+    <button class="hire" onclick="window.location.href='/contact/'">Hire Me</button>
+</body>
+
+</html>
+<script src="/js/main.js"></script>
+<script src="/js/loader.js" defer></script>

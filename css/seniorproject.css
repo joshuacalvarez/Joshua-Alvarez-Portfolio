@@ -1,0 +1,125 @@
+body {
+    background-image: url("../images/Paper Graphic.png")
+}
+
+.container {
+    margin-top: 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    max-height: 20vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px grey;
+    border-style: double;
+}
+
+.title p {
+    font-size: 60%;
+    color: rgb(55, 55, 55);
+    margin-top: -1%;
+    margin-bottom: 5%;
+}
+
+.step-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    color: rgb(55, 55, 55);
+    padding: 0%;
+    background-color: white;
+    border-radius: 10px;
+    max-height: 8vh;
+    margin: 1.5%;
+    font-weight: 1000;
+    border-style: double;
+}
+
+.step-title p {
+    font-size: 35px;
+}
+
+video {
+    max-height: 90vh;
+    width: 85%;
+    border: solid black 15px;
+    border-style: ridge;
+    border-radius: 1%;
+    margin: 1%;
+}
+
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 1.5%;
+}
+
+.display {
+    width: 78%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2%;
+    color: rgb(55, 55, 55);
+    margin: 1%;
+    text-align: center;
+    height: 50vh;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.description p {
+    font-size: 25px;
+}
+
+.sub-vertical-photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+    height: 80%;
+    margin: 1%;
+    gap: 10%;
+}
+
+.sub-vertical-photo img {
+    max-width: 95%;
+    max-height: 95%;
+    margin: auto;
+    border: solid black 10px;
+    border-style: ridge;
+    border-radius: 1%;
+}
+
+.photo {
+    max-width: 85%;
+    max-height: 90vh;
+    margin: auto;
+    border: solid black 15px;
+    border-style: ridge;
+    border-radius: 1%;
+}
