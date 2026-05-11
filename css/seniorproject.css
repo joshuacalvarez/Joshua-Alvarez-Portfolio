@@ -2,12 +2,17 @@ body {
     background-image: url("../images/Paper Graphic.png")
 }
 
+h1 {
+    margin: 1%;
+}
+
 .container {
     margin-top: 9%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .title {
@@ -15,10 +20,10 @@ body {
     flex-direction: column;
     align-items: center;
     width: 60%;
-    max-height: 20vh;
+    max-height: 16vh;
     background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 5px 5px 5px grey;
     border-style: double;
@@ -63,12 +68,28 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    margin: 1.5%;
+    width: 72%;
+    margin-bottom: 1.5%;
+}
+
+.step-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 1.5%;
 }
 
 .display {
     width: 78%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.display-top {
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,12 +116,32 @@ video {
     font-size: 25px;
 }
 
+.description-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2%;
+    color: rgb(55, 55, 55);
+    margin: 1%;
+    text-align: center;
+    height: 50vh;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.description-top p {
+    font-size: 25px;
+}
+
 .sub-vertical-photo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    max-width: 30%;
+    max-width: 45%;
     height: 80%;
     margin: 1%;
     gap: 10%;
