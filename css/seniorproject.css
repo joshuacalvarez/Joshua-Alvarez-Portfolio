@@ -1,5 +1,10 @@
 body {
-    background-image: url("../images/Paper Graphic.png")
+    background-image: url("../images/Paper Graphic.png");
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 h1 {
@@ -30,7 +35,7 @@ h1 {
 }
 
 .title p {
-    font-size: 60%;
+    font-size: 25px;
     color: rgb(55, 55, 55);
     margin-top: -1%;
     margin-bottom: 5%;
@@ -148,7 +153,7 @@ h1 {
 }
 
 .photo {
-    max-height: 85vh;
+    /* max-height: 85vh; */
     margin: auto;
     border: solid black 15px;
     border-style: ridge;
@@ -202,42 +207,49 @@ h1 {
     box-sizing: border-box;
 }
 
-/* ---------- MOBILE / TABLET ---------- */
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
+
+    * {
+        max-width: 100%;
+    }
+
+    .step,
+    .step-top {
+        overflow-x: hidden;
+    }
+
+
+    .title,
+    .step-title {
+        max-height: none;
+    }
+
+    .container,
+    .step,
+    .step-top,
+    .display,
+    .display-top,
+    .description,
+    .description-top {
+        width: calc(100% - 24px);
+        margin: 0 auto;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 
     .container {
+        width: 100%;
         margin-top: 18%;
-    }
-
-    .title {
-        width: 92%;
-        max-height: none;
-        padding: 12px;
-        text-align: center;
-    }
-
-    .title h1 {
-        font-size: 32px;
-    }
-
-    .title p {
-        font-size: 18px;
-    }
-
-    .step-title {
-        width: 70%;
-        max-height: none;
-        padding: 10px;
-    }
-
-    .step-title p {
-        font-size: 28px;
+        align-items: center;
     }
 
     .step,
     .step-top {
         flex-direction: column;
-        width: 95%;
+        align-items: center;
+        width: 100%;
         gap: 20px;
     }
 
@@ -245,14 +257,41 @@ h1 {
     .display-top,
     .description,
     .description-top {
-        width: 100%;
+        width: 95%;
+        max-width: 95%;
+        margin: 0 auto;
     }
 
     .description,
     .description-top {
         height: auto;
-        padding: 20px;
-        box-sizing: border-box;
+        padding: 16px;
+    }
+
+    .title {
+        width: 90%;
+    }
+
+    .step-title {
+        width: 68%;
+    }
+
+    .photo,
+    video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .media-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .media-wrapper img,
+    .media-wrapper video {
+        width: 100%;
+        height: auto;
     }
 
     .description p,
@@ -260,24 +299,16 @@ h1 {
         font-size: 20px;
     }
 
-    .sub-vertical-photo {
-        flex-direction: column;
-        width: 100%;
-        gap: 20px;
+    .step-title p {
+        font-size: 28px;
     }
 
-    .photo,
-    video {
-        max-width: 100%;
-        max-height: 75vh;
+    .title h1 {
+        font-size: 48px;
     }
-
-    .text-overlay {
-        font-size: 18px;
-        padding: 12px;
-    }
-
-    .media-wrapper {
-        margin: 0;
+}
+@media (max-width: 900px) {
+    body{
+        margin-left: -1%;
     }
 }
