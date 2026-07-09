@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script>document.documentElement.classList.add('preloading');</script>
     <meta charset="UTF-8">
@@ -10,20 +11,64 @@
     <link rel="stylesheet" href="/css/loader.css" />
     <link rel="stylesheet" href="/css/button.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/artintro.css" />
 </head>
+
 <body>
     <div id="preloader">
         <div class="loader">
             <div id="logo-bar">
-            <img src="/images/YouTube Logo.svg" class="logo bg" alt="Lumpy Animations">
-            <img src="/images/YouTube Logo.svg" class="logo fg" alt="" aria-hidden="true">
+                <img src="/images/YouTube Logo.svg" class="logo bg" alt="Lumpy Animations">
+                <img src="/images/YouTube Logo.svg" class="logo fg" alt="" aria-hidden="true">
             </div>
             <div id="prePercent" class="percent">0%</div>
         </div>
     </div>
 
-
     <div id="navbar-container"></div>
+
+    <section id="art-intro" class="art-intro" aria-label="Curated art preview">
+        <button id="skip-art-intro" class="skip-art-intro">Skip Reel</button>
+
+        <div class="sticky-flipbook">
+            <div class="sticky-note">
+                <img src="/images/art/paintings/Gray Scale.jpg" alt="Gray Scale digital painting">
+            </div>
+
+            <div class="sticky-note">
+                <img src="/images/art/graphics/InterestingPlacePosterTouchup.jpg" alt="Interesting place poster">
+            </div>
+
+            <div class="sticky-note">
+                <img src="/images/art/pencil/BuildingDrawing.jpg" alt="Architectural drawing">
+            </div>
+
+            <div class="sticky-note">
+                <video muted autoplay loop playsinline preload="metadata">
+                    <source src="/images/art/animation/LumpyStreamDrawingCam.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div class="sticky-note">
+                <img src="/images/art/graphics/Transformation-Penguin.jpg" alt="Transformation penguin">
+            </div>
+
+            <div class="sticky-note">
+                <img src="/images/art/paintings/Sara Senior Project.jpg" alt="Sara senior project">
+            </div>
+
+            <div class="sticky-note">
+                <img src="/images/art/pencil/JordyDrawing.jpg" alt="Jordy drawing">
+            </div>
+
+            <div class="sticky-note">
+                <video muted autoplay loop playsinline preload="metadata">
+                    <source src="/images/art/animation/Gtlive Yoshi Part 2 Scene.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
     <div id="content">
         <div class="Card-Containers">
             <a href="./digitalpaintings" class="card-link">
@@ -40,7 +85,7 @@
             <a href="./animation" class="card-link">
                 <div class="card">
                     <div class="card-img">
-                        <img src="/images/art/PfP 2024.jpg" alt="Art Collections" style="width: 100%;">
+                        <img src="/images/art/PfP 2024.jpg" alt="Animation" style="width: 100%;">
                     </div>
                     <div class="card-label">
                         <p>Animation</p>
@@ -51,7 +96,7 @@
             <a href="./graphicdesign" class="card-link">
                 <div class="card">
                     <div class="card-img">
-                        <img src="/images/art/graphics/Notan.jpg" alt="Art Collections" style="width: 100%;">
+                        <img src="/images/art/graphics/Notan.jpg" alt="Graphic Design" style="width: 100%;">
                     </div>
                     <div class="card-label">
                         <p>Graphic Design</p>
@@ -62,7 +107,7 @@
             <a href="./pencilpaper" class="card-link">
                 <div class="card">
                     <div class="card-img">
-                        <img src="/images/art/pencil/Grocery Bag.jpg" alt="Art Collections" style="width: 100%;">
+                        <img src="/images/art/pencil/Grocery Bag.jpg" alt="Pencil and Paper" style="width: 100%;">
                     </div>
                     <div class="card-label">
                         <p>Pencil & Paper</p>
@@ -73,7 +118,7 @@
             <a href="./music" class="card-link">
                 <div class="card">
                     <div class="card-img">
-                        <img src="/images/art/music/The Last Dm Cover.jpg" alt="Art Collections" style="width: 100%;">
+                        <img src="/images/art/music/The Last Dm Cover.jpg" alt="Music" style="width: 100%;">
                     </div>
                     <div class="card-label">
                         <p>Music</p>
@@ -83,10 +128,12 @@
         </div>
 
         <button class="button" onclick="window.location.href='../'">Back Home</button>
-        <button class="hire" onclick="window.location.href='/contact/'">Hire Me</button>
-
+        <button id="replay-art-intro" class="replay-art-intro">Replay Reel</button>
     </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/loader.js" defer></script>
+    <script src="/js/artIntro.js" defer></script>
 </body>
+
 </html>
-<script src="/js/main.js"></script>
-<script src="/js/loader.js" defer></script>
