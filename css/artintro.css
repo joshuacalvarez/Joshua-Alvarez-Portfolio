@@ -199,24 +199,25 @@
 
 .replay-art-intro {
     position: fixed;
+    bottom: 2.5%;
     right: 1%;
-    bottom: 1rem;
-    z-index: 20;
+    z-index: 999;
+
+    width: 10%;
+    padding: 1%;
 
     border: none;
-    border-radius: 10px;
-    padding: 0.9rem 1.2rem;
+    border-radius: 12px;
 
-    background: #ead67d;
+    background-color: #ead67d;
     color: white;
-    font-weight: 700;
+
+    font-weight: bold;
     font-size: 20px;
     cursor: pointer;
 
-    transition: .2s;
-
+    transition: 0.2s;
     filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.2));
-
 }
 
 .replay-art-intro:hover {
@@ -235,11 +236,15 @@
     .skip-art-intro {
         right: 1rem;
         top: 1rem;
+        bottom: auto;
         font-size: 0.9rem;
     }
 
     .replay-art-intro {
-        bottom: 5rem;
+        right: 1rem;
+        bottom: 1rem;
+        width: auto;
+        padding: 0.9rem 1.2rem;
         font-size: 0.9rem;
     }
 }
