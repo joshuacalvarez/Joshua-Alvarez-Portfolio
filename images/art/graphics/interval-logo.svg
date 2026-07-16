@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .e {
+        stroke: #bcbcbc;
+        stroke-width: 30px;
+      }
+
+      .e, .f, .g {
+        stroke-miterlimit: 10;
+      }
+
+      .f {
+        fill: #fff;
+        stroke-width: 40px;
+      }
+
+      .f, .g {
+        stroke: #000;
+      }
+
+      .g {
+        fill: none;
+        stroke-width: 60px;
+      }
+    </style>
+  </defs>
+  <g id="a" data-name="Layer 4">
+    <rect class="f" x="37" y="37" width="950" height="950" rx="103.26" ry="103.26"/>
+  </g>
+  <g id="b" data-name="Layer 1">
+    <line class="e" x1="196" y1="430.62" x2="196" y2="44.91"/>
+    <line class="e" x1="517" y1="625.51" x2="517" y2="44.91"/>
+    <line class="e" x1="837" y1="430.62" x2="837" y2="44.91"/>
+  </g>
+  <g id="c" data-name="Layer 2">
+    <rect x="724.94" y="422.91" width="204.13" height="573.98" rx="51.45" ry="51.45"/>
+    <rect x="94.94" y="422.91" width="204.13" height="573.98" rx="51.45" ry="51.45"/>
+    <rect x="409.94" y="495.3" width="204.13" height="501.59" rx="51.45" ry="51.45"/>
+    <circle cx="512" cy="323.13" r="110"/>
+  </g>
+  <g id="d" data-name="Layer 3">
+    <rect class="g" x="37" y="37" width="950" height="950" rx="103.26" ry="103.26"/>
+  </g>
+</svg>
