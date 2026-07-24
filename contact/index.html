@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script>document.documentElement.classList.add('preloading');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Joshua Alvarez</title>
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/loader.css" />
     <link rel="stylesheet" href="/css/contact.css" />
-    <link rel="stylesheet" href="/css/button.css"/>
+    <link rel="stylesheet" href="/css/button.css" />
 </head>
+
 <body>
     <div id="preloader">
         <div class="loader">
             <div id="logo-bar">
-            <img src="/images/favicon.svg" class="logo bg" alt="Portfolio Logo" aria-hidden="true">
-            <img src="/images/favicon.svg" class="logo fg" alt="" aria-hidden="true">
+                <img src="/images/favicon.svg" class="logo bg" alt="Portfolio Logo" aria-hidden="true">
+                <img src="/images/favicon.svg" class="logo fg" alt="" aria-hidden="true">
             </div>
             <div id="prePercent" class="percent">0%</div>
         </div>
@@ -25,29 +28,76 @@
     <div class="container">
         <div class="info">
             <img src="/images/ProfileImage.jpg" alt="Avatar" class="profile">
-            <p class="description">Hihi! My name is Joshua Alvarez. I like to make art and I know how to code, and hopefully this website proved that. But if it didn't, I have a cool paper from Grand Canyon University as evidence. (Bachelors of Science in Software Development)</p>
+            <p class="description">Hihi! My name is Joshua Alvarez. I like to make art and I know how to code, and
+                hopefully this website proved that. But if it didn't, I have a cool paper from Grand Canyon University
+                as evidence. (Bachelors of Science in Software Development)</p>
         </div>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/joshua-alvarez-94b9072a4/" class="linkInfo">
-                <img src="/images/LinkedIn_Logo.jpg" class="imgLink">
-                <p>Joshua Alvarez</p>
-            </a>
-            <a href="https://github.com/joshuacalvarez" class="linkInfo">
-                <img src="/images/GithubLogo.png" class="imgLink">
-                <p>joshuacalvarez</p>
-            </a>
-            <a href="https://www.fiverr.com/lumpyanimations" class="linkInfo">
-                <img src="/images/Fiverr-Logo.png" class="imgLink">
-                <p>@lumpyanimations</p>
-            </a>
-            <a href="mailto:joshua@joshuacalvarez.com" class="linkInfo">
-                <img src="/images/GmailLogo.webp" class="imgLink">
-                <p>joshua@joshuacalvarez.com</p>
-            </a>
+        <div class="right-scrollable">
+            <div class="links">
+                <div class="individual-link">
+                    <a href="https://www.linkedin.com/in/joshua-alvarez-94b9072a4/" class="linkInfo">
+                        <img src="/images/LinkedIn_Logo.jpg" class="imgLink">
+                        <p>Joshua Alvarez</p>
+                    </a>
+                </div>
+                <div class="individual-link">
+                    <a href="https://github.com/joshuacalvarez" class="linkInfo">
+                        <img src="/images/GithubLogo.png" class="imgLink">
+                        <p>joshuacalvarez</p>
+                    </a>
+                </div>
+                <div class="individual-link">
+                    <a href="mailto:joshua@joshuacalvarez.com" class="linkInfo">
+                        <img src="/images/GmailLogo.webp" class="imgLink">
+                        <p>joshua@joshuacalvarez.com</p>
+                    </a>
+                </div>
+                <div class="individual-link">
+                    <a href="https://www.fiverr.com/lumpyanimations" class="linkInfo">
+                        <img src="/images/Fiverr-Logo.png" class="imgLink">
+                        <p>@lumpyanimations</p>
+                    </a>
+                </div>
+            </div>
+            <section class="currently">
+                <h2>What I'm Up To</h2>
+
+                <div class="current-item">
+                    <span class="current-label">Coding</span>
+                    <p>Building Interval, an interactive ear-training platform.</p>
+                </div>
+
+                <div class="current-item">
+                    <span class="current-label">Designing</span>
+                    <p>Refining this portfolio into a digital scrapbook of my work.</p>
+                </div>
+
+                <div class="current-item">
+                    <span class="current-label">Making</span>
+                    <p>Writing and producing an original concept album.</p>
+                </div>
+
+                <div class="current-item">
+                    <span class="current-label">Learning</span>
+                    <p>Practicing data structures, algorithms, and music theory.</p>
+                </div>
+            </section>
+            <div class="Resume">
+                <a href="/files/JoshuaAlvarez_Resume.pdf" download="Joshua-Alvarez-Resume.pdf" class="resume-download"
+                    aria-label="Download Joshua Alvarez's resume as a PDF">
+                    <img src="/images/JoshuaAlvarez_Resume.png" alt="Preview of Joshua Alvarez's resume">
+
+                    <div class="resume-overlay">
+                        <span>Click to Download</span>
+                    </div>
+                </a>
+            </div>
+            </br>
         </div>
     </div>
     <button class="button" onclick="window.location.href='../'">Back Home</button>
 </body>
+
 </html>
 <script src="/js/main.js"></script>
 <script src="/js/loader.js" defer></script>
