@@ -117,12 +117,11 @@ p {
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
-  gap: 35px;
   align-items: center;
-  margin-bottom: 3%;
+  margin: 1.5%;
+  gap: 12px;
 
-  min-height: clamp(810px, 72vh, 900px);
-  height: auto;
+  height: clamp(500px, 80vh, 800px);
   width: 65vw;
   padding: 2%;
   padding-left: calc(150px + 2%);
@@ -203,8 +202,8 @@ p {
 .Notebook-Title {
   position: relative;
   z-index: 2;
+  width: min(80%, 400px);
 
-  width: 50%;
   padding: 10px;
 
   background-color: rgb(250, 250, 250);
@@ -226,6 +225,7 @@ p {
 }
 
 .Notebook-Title p {
+  font-size: clamp(18px, 2vw, 24px);
   padding: 1%;
   border-radius: 5px;
 }
@@ -233,7 +233,7 @@ p {
 .Notebook-Description {
   text-align: center;
   padding: 1%;
-  width: 70%;
+  width: 80%;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 2px;
   background-image:
@@ -246,7 +246,7 @@ p {
 }
 
 .Notebook-Description p {
-  font-size: 18px;
+  font-size: clamp(10px, 1.5vw, 16px);
   line-height: 1.35;
   font-weight: 600;
   margin: 0;
@@ -255,23 +255,35 @@ p {
 
 .Preview {
   display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+
   justify-content: center;
   align-items: center;
+
   width: 80%;
+  overflow: hidden;
 }
 
 .Preview video {
-  width: 100%;
-  max-height: 50vh;
+  display: block;
+
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+  border: 6px inset black;
   border-radius: 5px;
-  border: inset rgb(0, 0, 0) 6px;
 }
 
 .Preview--portrait video {
   width: auto;
-  height: 50vh;
+  height: auto;
   max-width: 100%;
-  object-fit: contain;
+  max-height: 100%;
 }
 
 .Skills-Grid {
@@ -565,10 +577,7 @@ body:not(.preloading) .hire {
 
   .Notebook-Card {
     padding:
-      22px
-      12px
-      20px
-      42px;
+      22px 12px 20px 42px;
 
     gap: 16px;
   }
