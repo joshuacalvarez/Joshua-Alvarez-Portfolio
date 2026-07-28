@@ -1,0 +1,256 @@
+<div class="Project-Modal" id="project-modal" aria-hidden="true">
+    <div class="Project-Modal-Backdrop"></div>
+
+    <div class="Project-Book" role="dialog" aria-modal="true" aria-labelledby="project-book-title">
+        <button class="Project-Modal-Close" type="button" aria-label="Close project details">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 6L18 18M18 6L6 18" />
+            </svg>
+        </button>
+
+        <div class="Project-Book-Pages">
+            <!-- INTERVAL -->
+            <section class="Project-Details" data-project-details="interval" aria-hidden="true">
+                <article class="Project-Page Project-Page--active">
+                    <div class="Project-Page-Content Project-Cover">
+                        <div>
+                            <p class="Project-Page-Label"
+                                style="color: rgb(255, 141, 35); text-decoration: overline underline; text-underline-position: under;">
+                                ·Currently In Development·
+                            </p>
+                            <h2 id="project-book-title">Interval</h2>
+                            <p class="Project-Cover-Subtitle">
+                                Interactive ear-training platform
+                            </p>
+
+                            <ul class="Project-Stack">
+                                <li>Next.js</li>
+                                <li>React</li>
+                                <li>TypeScript</li>
+                                <li>Tone.js</li>
+                            </ul>
+                        </div>
+
+                        <img src="/images/art/graphics/interval-logo.svg" alt="Interval logo"
+                            class="Project-Cover-Logo">
+                    </div>
+                </article>
+
+                <article class="Project-Page">
+                    <div class="Project-Page-Content">
+                        <p class="Project-Page-Label">01 — Product Vision</p>
+                        <div class="Page-Details">
+                            <h3>Ear training made fun</h3>
+                            <p>
+                                As someone who enjoys creating and listening to music, I found many ear-training apps
+                                repetitive, frustrating, or overpriced. Interval is designed to make music education
+                                more engaging, accessible, and rewarding through a game-focused learning experience.
+                            </p>
+                            <div class="Project-List">
+                                <div class="List-Title">
+                                    <p>
+                                        Built for the User:
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li>Personalized training</li>
+                                    <li>Adaptive difficulty</li>
+                                    <li>Cross-platform synchronization</li>
+                                    <li>Meaningful progress tracking</li>
+                                    <li>Interactive, game-like exercises</li>
+                                    <li>Free access core games</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </article>
+
+                <article class="Project-Page">
+                    <div class="Project-Page-Content">
+                        <p class="Project-Page-Label">02 — Training System </p>
+                        <div class="Page-Details">
+                            <h3>Training Through Play</h3>
+                            <p>
+                                Interval is designed to make music education feel like progression rather than
+                                repetition. Users can build consistent habits, advance through increasingly challenging
+                                exercises, and strengthen different areas of their musical ear through focused,
+                                game-like training.
+                            </p>
+
+                            <div class="Project-List">
+                                <div class="List-Title">
+                                    <p>
+                                        Planned training experiences include:
+                                    </p>
+                                </div>
+                                <div class="List-Subheading">
+                                    <p>Core Game Modes</p>
+                                </div>
+                                <ul>
+                                    <li>Interval Recognition</li>
+                                    <li>Pitch Training</li>
+                                    <li>Chord Progression Recognition</li>
+                                    <li>Hearing Harmonies</li>
+                                    <li>Music Theory Basics Bootcamp</li>
+                                </ul>
+                                <div class="List-Subheading">
+                                    <p>Progress Features</p>
+                                </div>
+                                <ul>
+                                    <li>Daily streaks and practice goals</li>
+                                    <li>Skill levels and milestones</li>
+                                    <li>Achievements and mastery badges</li>
+                                    <li>Personalized practice recommendations</li>
+                                    <li>Progress reports and weak-area tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="Project-Page">
+                    <div class="Project-Page-Content">
+                        <p class="Project-Page-Label">03 — Engineering</p>
+                        <h3>Synchronizing interface and sound</h3>
+
+                        <p>
+                            The application uses Tone.js to schedule notes and
+                            chords while React controls the current question,
+                            answer state, feedback phase, and keyboard layout.
+                        </p>
+
+                        <p>
+                            One of the main technical challenges was preventing
+                            delayed audio from a previous question from
+                            continuing after the user selected the next one. I
+                            introduced cancellation checks so each interaction
+                            can safely interrupt the active playback sequence.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="Project-Page">
+                    <div class="Project-Page-Content">
+                        <p class="Project-Page-Label">04 — Reflection</p>
+                        <h3>What the project demonstrates</h3>
+
+                        <p>
+                            Interval combines front-end interaction design,
+                            browser audio, state management, responsive UI, and
+                            product thinking in one application.
+                        </p>
+
+                        <p>
+                            The project is continuing to grow toward
+                            personalized practice, additional difficulty
+                            levels, user profiles, streaks, and long-term
+                            progress reports.
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <!-- CAPSTONE -->
+            <section class="Project-Details" data-project-details="capstone" aria-hidden="true">
+                <article class="Project-Page Project-Page--active">
+                    <div class="Project-Page-Content Project-Cover">
+                        <div>
+                            <p class="Project-Page-Label">DATA TO BE ENTERED</p>
+                            <h2>Aqua Vis</h2>
+                            <p class="Project-Cover-Subtitle">
+                                Full-Stack Dancing Water Feature
+                            </p>
+
+                            <ul class="Project-Stack">
+                                <li>Android</li>
+                                <li>Kotlin</li>
+                                <li>Arduino</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- Drift -->
+            <section class="Project-Details" data-project-details="drift" aria-hidden="true">
+                <article class="Project-Page Project-Page--active">
+                    <div class="Project-Page-Content Project-Cover">
+                        <div>
+                            <p class="Project-Page-Label">DATA TO BE ENTERED</p>
+                            <h2>Drift</h2>
+                            <p class="Project-Cover-Subtitle">
+                                Full-stack music database application
+                            </p>
+
+                            <ul class="Project-Stack">
+                                <li>Next.js</li>
+                                <li>TypeScript</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- ANAGROW -->
+            <section class="Project-Details" data-project-details="anagrow" aria-hidden="true">
+                <article class="Project-Page Project-Page--active">
+                    <div class="Project-Page-Content Project-Cover">
+                        <div>
+                            <p class="Project-Page-Label">DATA TO BE ENTERED</p>
+                            <h2>Anagrow</h2>
+                            <p class="Project-Cover-Subtitle">
+                                Word Latter Game
+                            </p>
+
+                            <ul class="Project-Stack">
+                                <li>Unity</li>
+                                <li>C#</li>
+                                <li>Android</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- BOOKCOOK -->
+            <section class="Project-Details" data-project-details="bookcook" aria-hidden="true">
+                <article class="Project-Page Project-Page--active">
+                    <div class="Project-Page-Content Project-Cover">
+                        <div>
+                            <p class="Project-Page-Label">DATA TO BE ENTERED</p>
+                            <h2>BookCook</h2>
+                            <p class="Project-Cover-Subtitle">
+                                Social Media Recipe Platform
+                            </p>
+
+                            <ul class="Project-Stack">
+                                <li>Java</li>
+                                <li>Spring Boot</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <div class="Project-Book-Navigation">
+            <button class="Project-Page-Button Project-Page-Previous" type="button" aria-label="Previous page">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15 5L8 12L15 19" />
+                </svg>
+            </button>
+
+            <span class="Project-Page-Count">
+                <span class="Project-Current-Page">1</span>
+                of
+                <span class="Project-Total-Pages">1</span>
+            </span>
+
+            <button class="Project-Page-Button Project-Page-Next" type="button" aria-label="Next page">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 5L16 12L9 19" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

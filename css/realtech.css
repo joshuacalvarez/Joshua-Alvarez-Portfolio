@@ -9,7 +9,7 @@ body {
 
 #content {
   width: 100%;
-  margin-top: 8%;
+  margin-top: 9%;
 }
 
 .Card-Containers {
@@ -19,6 +19,7 @@ body {
   align-items: center;
   width: 90%;
   margin: auto;
+  margin-top: 5%;
 }
 
 .card-link {
@@ -121,8 +122,8 @@ p {
   margin: 1.5%;
   gap: 12px;
 
-  height: clamp(500px, 80vh, 800px);
-  width: 65vw;
+  height: clamp(500px, 75vh, 800px);
+  width: 60vw;
   padding: 2%;
   padding-left: calc(150px + 2%);
 
@@ -148,7 +149,12 @@ p {
     inset 4px 4px 0 rgba(255, 255, 255, 0.08),
     inset -6px -6px 0 rgba(0, 0, 0, 0.15);
 
-  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: left center;
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.45s cubic-bezier(0.075, 0.82, 0.165, 1),
+    box-shadow 0.45s ease;
 }
 
 .Notebook-Card::after {
@@ -194,10 +200,17 @@ p {
   pointer-events: none;
 }
 
-/* .Notebook-Card:hover {
-  transform: scale(1.03);
+.Notebook-Card:hover {
+  transform:
+    perspective(2000px) rotateY(-10deg) rotateZ(-0.2deg) scale(1.001) translateX(-10px);
+
+  box-shadow:
+    12px 10px 0 rgba(0, 0, 0, 0.85),
+    inset 4px 4px 0 rgba(255, 255, 255, 0.08),
+    inset -6px -6px 0 rgba(0, 0, 0, 0.15);
+
   cursor: pointer;
-} */
+}
 
 .Notebook-Title {
   position: relative;
@@ -322,74 +335,6 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 12px;
-}
-
-.Project-Modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  padding: 24px;
-}
-
-.Project-Modal.is-open {
-  display: flex;
-}
-
-.Project-Modal-Backdrop {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
-}
-
-.Project-Modal-Content {
-  position: relative;
-  z-index: 1;
-  margin-top: 5%;
-
-  width: 90vw;
-  max-width: 1200px;
-  max-height: 90vh;
-  overflow-y: auto;
-
-  padding: 40px;
-
-  background-color: white;
-  border: 6px solid black;
-  border-radius: 16px;
-
-  background-image:
-    linear-gradient(145deg,
-      rgba(255, 255, 255, 0.7),
-      transparent 40%),
-    repeating-linear-gradient(0deg,
-      rgba(0, 0, 0, 0.018) 0 1px,
-      transparent 1px 4px);
-}
-
-.Project-Modal-Close {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-
-  border: none;
-  background: transparent;
-
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.Project-Details {
-  display: none;
-}
-
-.Project-Details.is-active {
-  display: block;
 }
 
 

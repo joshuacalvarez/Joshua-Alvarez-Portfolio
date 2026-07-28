@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/loader.css" />
     <link rel="stylesheet" href="/css/button.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/techmodal.css" />
 </head>
 
 <body>
@@ -139,7 +140,8 @@
                 </div>
                 <div class="Notebook-Description">
                     <p>
-                        Unity-based Android word puzzle game featuring progressive anagram challenges, dynamic UI elements, and interactive game logic built in C#
+                        Unity-based Android word puzzle game featuring progressive anagram challenges, dynamic UI
+                        elements, and interactive game logic built in C#
                     </p>
                 </div>
                 <div class="Skills-Grid">
@@ -170,7 +172,8 @@
                 </div>
                 <div class="Notebook-Description">
                     <p>
-                        Java and Spring Boot recipe-sharing platform featuring CRUD functionality, relational data management, user authentication, and API documentation
+                        Java and Spring Boot recipe-sharing platform featuring CRUD functionality, relational data
+                        management, user authentication, and API documentation
                     </p>
                 </div>
                 <div class="Skills-Grid">
@@ -189,45 +192,13 @@
                 </div>
             </div>
         </div>
-        <div class="Project-Modal" id="project-modal">
-            <div class="Project-Modal-Backdrop"></div>
-
-            <div class="Project-Modal-Content">
-                <button class="Project-Modal-Close" type="button">×</button>
-
-                <section class="Project-Details" data-project-details="interval">
-                    <h2>Interval Music Platform</h2>
-
-                    <p>
-                        Interactive ear-training platform built with Next.js, React,
-                        and TypeScript.
-                    </p>
-
-                    <h3>Overview</h3>
-                    <p>Interval-specific content...</p>
-
-                    <div class="Interval-Gallery">
-                        <!-- videos, screenshots, timeline, etc. -->
-                    </div>
-                </section>
-
-                <section class="Project-Details" data-project-details="drift">
-                    <h2>Drift Music App</h2>
-
-                    <p>Full-stack music discovery platform.</p>
-
-                    <div class="Drift-Case-Study">
-                        <!-- completely different layout -->
-                    </div>
-                </section>
-            </div>
-        </div>
+        <div id="project-modal-container"></div>
 
         <button class="button" onclick="window.location.href='../'">Back Home</button>
 
     </div>
     <script src="/js/main.js"></script>
-    <!-- <script src="/js/tech.js"></script> -->
+    <script src="/js/tech.js"></script>
     <script src="/js/loader.js" defer></script>
 </body>
 

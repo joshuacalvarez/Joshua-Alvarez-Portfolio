@@ -1,0 +1,467 @@
+.Project-Modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(12px, 3vw, 40px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.Project-Modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.Project-Modal-Backdrop {
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+}
+
+.Project-Book {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 7%;
+
+    width: min(90vw, 1000px);
+    height: min(80vh, 700px);
+
+    overflow: hidden;
+
+    background-color: rgb(248, 243, 231);
+    background-image:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.08),
+            transparent 5%,
+            transparent 95%,
+            rgba(0, 0, 0, 0.08)),
+        repeating-linear-gradient(0deg,
+            transparent 0 31px,
+            rgba(60, 100, 140, 0.08) 31px 32px);
+
+    border: 6px solid black;
+    border-radius: 10px 18px 18px 10px;
+
+    box-shadow:
+        12px 16px 0 rgba(0, 0, 0, 0.75),
+        inset 18px 0 18px rgba(0, 0, 0, 0.08);
+}
+
+.Project-Book::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    z-index: 5;
+
+    width: 3px;
+
+    background-color: rgba(160, 75, 75, 0.28);
+
+    box-shadow:
+        6px 0 rgba(0, 0, 0, 0.04),
+        12px 0 rgba(0, 0, 0, 0.025);
+
+    pointer-events: none;
+}
+
+.Project-Book-Pages {
+    position: absolute;
+    inset: 0 0 64px;
+}
+
+.Project-Details {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.Project-Details.is-active {
+    display: block;
+}
+
+.Project-Page {
+    position: absolute;
+    inset: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    transform-origin: left center;
+    backface-visibility: hidden;
+}
+
+.Project-Page.Project-Page--active {
+    display: block;
+}
+
+.Project-Page-Content {
+    width: 100%;
+    height: 100%;
+
+    padding:
+        clamp(48px, 6vw, 75px) clamp(40px, 7vw, 90px);
+
+    overflow-y: auto;
+}
+
+.Project-Page-Content h2,
+.Project-Page-Content h3,
+.Project-Page-Content p {
+    margin-top: 0;
+}
+
+.Project-Page-Content h2 {
+    margin-bottom: 18px;
+
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+}
+
+.Project-Page-Content h3 {
+    max-width: 720px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    text-transform: capitalize;
+}
+
+.Project-Page-Content p {
+    max-width: 720px;
+
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+
+.Project-Page-Label {
+    margin-bottom: 18px;
+
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+.Project-Cover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.Project-Cover-Subtitle {
+    margin-bottom: 26px;
+
+    font-size: clamp(1rem, 2vw, 1.3rem) !important;
+}
+
+.Project-Cover-Logo {
+    width: min(35%, 280px);
+    max-height: 300px;
+
+    object-fit: contain;
+}
+
+.Project-Page-Details {
+    display: flex;
+    justify-content: center;
+}
+
+.Page-Details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Page-Details p {
+    font-size: 40%;
+    padding: 1%;
+    margin: 0;
+    text-align: center;
+}
+
+.Project-List {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.List-Title {
+    width: 100%;
+    margin: 1%;
+}
+
+.List-Subheading {
+    width: 100%;
+    text-align: left;
+}
+
+.List-Subheading p{
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 600;
+    text-decoration: overline underline;
+}
+
+
+.Project-List ul {
+    margin: 0;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    list-style-type: circle;
+}
+
+.Project-List li {
+    font-size: 50%;
+}
+
+.List-Title p {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: 50%;
+    font-weight: bold;
+}
+
+.Project-Stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin: 24px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.Project-Stack li {
+    padding: 8px 13px;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 999px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.Project-Feature-List {
+    display: grid;
+    gap: 14px;
+
+    max-width: 700px;
+    margin-top: 28px;
+    padding-left: 22px;
+
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    line-height: 1.5;
+}
+
+.Project-Page-Visual {}
+
+.Project-Page-Visual video,
+.Project-Page-Visual img {
+    /* display: block; */
+
+    width: 100%;
+    /* max-height: 260px; */
+
+    object-fit: cover;
+
+    border: 5px inset black;
+    border-radius: 6px;
+
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Project-Code-Snippet {
+    width: fit-content;
+    max-width: 100%;
+
+    margin-top: 28px;
+    padding: 16px 20px;
+
+    overflow-x: auto;
+
+    border-radius: 7px;
+
+    background-color: rgb(35, 35, 38);
+    color: white;
+
+    font-size: clamp(0.7rem, 1.5vw, 0.95rem);
+}
+
+.Project-Link-Group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.Project-Link {
+    padding: 10px 18px;
+
+    border: 2px solid currentColor;
+    border-radius: 999px;
+
+    color: inherit;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.Project-Link:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.Project-Book-Navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    height: 64px;
+
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+
+    background-color: rgba(242, 235, 219, 0.97);
+}
+
+.Project-Page-Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    font-size: 1.25rem;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.Project-Page-Button:hover:not(:disabled) {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+.Project-Page-Button:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.Project-Page-Button svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    pointer-events: none;
+}
+
+.Project-Page-Count {
+    min-width: 55px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Project-Modal-Close {
+    position: absolute;
+    top: 14px;
+    left: 1%;
+    z-index: 10;
+
+    width: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+
+    border: none;
+    border-radius: 30%;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.Project-Modal-Close:hover {
+    background-color: white;
+    transform: rotate(5deg) scale(1.05);
+}
+
+.Project-Modal-Close svg {
+    width: 100%;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+
+    pointer-events: none;
+}
