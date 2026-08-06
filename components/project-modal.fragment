@@ -71,7 +71,7 @@
                     <div class="Project-Page-Content">
                         <p class="Project-Page-Label">02 — Training System </p>
                         <div class="Page-Details">
-                            <h3>Training Through Play</h3>
+                            <h3>Practice Through Play</h3>
                             <p>
                                 Interval is designed to make music education feel like progression rather than
                                 repetition. Users can build consistent habits, advance through increasingly challenging
@@ -113,41 +113,74 @@
                 <article class="Project-Page">
                     <div class="Project-Page-Content">
                         <p class="Project-Page-Label">03 — Engineering</p>
-                        <h3>Synchronizing interface and sound</h3>
+                        <div class="Page-Details">
 
-                        <p>
-                            The application uses Tone.js to schedule notes and
-                            chords while React controls the current question,
-                            answer state, feedback phase, and keyboard layout.
-                        </p>
+                            <h3>Sound into Interaction</h3>
 
-                        <p>
-                            One of the main technical challenges was preventing
-                            delayed audio from a previous question from
-                            continuing after the user selected the next one. I
-                            introduced cancellation checks so each interaction
-                            can safely interrupt the active playback sequence.
-                        </p>
+                            <p> Interval uses Tone.js to schedule notes and chords while React manages the current
+                                question, selected answer, feedback state, difficulty level, and visual keyboard
+                                updates. </p>
+
+                            <p> The training system is built from reusable note and interval data, making it easier to
+                                generate randomized exercises and expand the platform with additional difficulty levels
+                                and game modes. </p>
+
+                            <p> A key challenge was keeping the interface synchronized with asynchronous audio. I added
+                                playback cancellation and state checks so users can move between questions without
+                                delayed notes or feedback carrying into the next exercise. </p>
+                        </div>
                     </div>
                 </article>
 
                 <article class="Project-Page">
                     <div class="Project-Page-Content">
                         <p class="Project-Page-Label">04 — Reflection</p>
-                        <h3>What the project demonstrates</h3>
+                        <div class="Page-Details">
+                            <h3>Learn from Teaching</h3>
 
-                        <p>
-                            Interval combines front-end interaction design,
-                            browser audio, state management, responsive UI, and
-                            product thinking in one application.
-                        </p>
+                            <p> Interval began as a single ear-training exercise, but it quickly became an opportunity
+                                to think more deeply about how people learn. I had to consider pacing, feedback,
+                                difficulty, and motivation alongside the technical implementation. </p>
 
-                        <p>
-                            The project is continuing to grow toward
-                            personalized practice, additional difficulty
-                            levels, user profiles, streaks, and long-term
-                            progress reports.
-                        </p>
+                            <p> The project strengthened my ability to connect product decisions with engineering
+                                choices. Reusable training logic, responsive audio, and clear visual feedback all became
+                                part of creating an experience that felt consistent rather than just functional. </p>
+
+                            <p> More than anything, Interval taught me to evaluate a project from the user’s perspective
+                                and to treat accessibility, clarity, and engagement as core parts of the build. </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="Project-Page">
+                    <div class="Project-Page-Content">
+                        <p class="Project-Page-Label">05 — Next Steps</p>
+                        <div class="Page-Details">
+                            <h3>Now What?</h3>
+
+                            <p>Interval is STILL in development.</p>
+
+                            <p> The next phase of Interval is focused on expanding the platform beyond interval
+                                recognition while strengthening the systems that support long-term learning. </p>
+
+                            <div class="Project-List">
+                                <div class="List-Title">
+                                    <p>Planned development:</p>
+                                </div>
+                                <ul>
+                                    <li>Additional pitch, chord, harmony, and theory exercises</li>
+                                    <li>Adaptive difficulty based on user performance</li>
+                                    <li>Profiles with synchronized progress across devices</li>
+                                    <li>Daily goals, streaks, achievements, and skill levels</li>
+                                    <li>Performance reports and weak-area recommendations</li>
+                                    <li>Improved accessibility and mobile responsiveness</li>
+                                </ul>
+                            </div>
+
+                            <p> These additions will turn the current training experience into a broader system that can
+                                guide users from basic recognition skills toward more advanced musical understanding.
+                            </p>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -168,6 +201,8 @@
                                 <li>Arduino</li>
                             </ul>
                         </div>
+                        <img src="/images/tech/SeniorProject/GlowFountain.jpg" alt="Interval logo"
+                            class="Project-Cover-Logo">
                     </div>
                 </article>
             </section>
