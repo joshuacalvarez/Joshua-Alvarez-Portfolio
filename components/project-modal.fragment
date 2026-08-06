@@ -189,10 +189,12 @@
                 <article class="Project-Page Project-Page--active">
                     <div class="Project-Page-Content Project-Cover">
                         <div>
-                            <p class="Project-Page-Label">DATA TO BE ENTERED</p>
-                            <h2>Aqua Vis</h2>
+                            <p class="Project-Page-Label">
+                                Data to be entered
+                            </p>
+                            <h2 id="project-book-title">Aqua Vis</h2>
                             <p class="Project-Cover-Subtitle">
-                                Full-Stack Dancing Water Feature
+                                Audio-reactive dancing fountain
                             </p>
 
                             <ul class="Project-Stack">
@@ -201,7 +203,8 @@
                                 <li>Arduino</li>
                             </ul>
                         </div>
-                        <img src="/images/tech/SeniorProject/GlowFountain.jpg" alt="Interval logo"
+
+                        <img src="/images/tech/SeniorProject/GlowFountain.jpg" alt="Aqua Vis Live Shot"
                             class="Project-Cover-Logo">
                     </div>
                 </article>
